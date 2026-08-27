@@ -1,0 +1,11 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "ru.doomedru.mixin.global",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "doomedru.refmap.json",
+  "plugin": "ru.doomedru.mixin.DoomedRuMixinPlugin",
+  "mixins": [],
+  "client": [ "LiteralContentsMixin", "FontMixin", "GuiGraphicsMixin" ],
+  "injectors": { "defaultRequire": 0 }
+}

@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Specification-Title: doomedru
+Specification-Vendor: doomedru
+Specification-Version: 1
+Implementation-Title: DoomedRU
+Implementation-Version: 1.0.0
+Implementation-Vendor: doomedru
+MixinConfigs: doomedru.mixins.json,doomedru.global.mixins.json
+
