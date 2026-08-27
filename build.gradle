@@ -1,0 +1,86 @@
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+    id 'org.spongepowered.mixin'  version '0.7.+'
+}
+
+version = '1.0.0'
+group   = 'ru.doomedru'
+archivesBaseName = 'doomedru'
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+minecraft {
+    // официальные (Mojang) маппинги — имена классов как в исходниках Minecraft
+    mappings channel: 'official', version: '1.20.1'
+    copyIdeResources = true
+
+    runs {
+        client {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', ''
+            property 'forge.logging.console.level', 'info'
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+            mods { doomedru { source sourceSets.main } }
+        }
+    }
+}
+
+// ВАЖНО: здесь должны быть перечислены ВСЕ конфиги миксинов.
+// Конфиг, не объявленный в этом блоке, не попадает в обработку reobfJar:
+// его записи в refmap остаются с именами официальных маппингов (visit, text),
+// а собранная игра работает на SRG-именах (m_213874_). Инъекция тогда просто
+// не находит цель и молча пропускается - "defaultRequire": 0 не даёт ни ошибки,
+// ни строки в логе. Из-за этого doomedru.global.mixins.json был объявлен только
+// в mods.toml и не работал в собранном моде, хотя в dev-запуске всё сходилось.
+mixin {
+    add sourceSets.main, 'doomedru.refmap.json'
+    config 'doomedru.mixins.json'
+    config 'doomedru.global.mixins.json'
+}
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
+}
+
+// Doomed нужен только для компиляции: процессор аннотаций Mixin проверяет,
+// что все классы из @Mixin(targets = ...) существуют. В готовый jar он не попадает.
+def doomedJars = fileTree(dir: 'libs', include: '*.jar')
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.20.1-47.3.0'
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+    compileOnly doomedJars
+}
+
+gradle.taskGraph.whenReady {
+    if (doomedJars.isEmpty()) {
+        throw new GradleException(
+            "\n\n  Положите jar мода Doomed в папку libs/ и повторите сборку.\n" +
+            "  Например: libs/doomedmatu0.3.6.jar\n" +
+            "  Он нужен только на время компиляции и в готовый мод не войдёт.\n" +
+            "  Без него Mixin не сможет проверить классы-цели и сборка упадёт.\n")
+    }
+}
+
+tasks.named('jar') {
+    manifest {
+        attributes([
+            'Specification-Title'     : 'doomedru',
+            'Specification-Vendor'    : 'doomedru',
+            'Specification-Version'   : '1',
+            'Implementation-Title'    : project.name,
+            'Implementation-Version'  : project.jar.archiveVersion,
+            'Implementation-Vendor'   : 'doomedru',
+            'MixinConfigs'            : 'doomedru.mixins.json,doomedru.global.mixins.json'
+        ])
+    }
+    finalizedBy 'reobfJar'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
