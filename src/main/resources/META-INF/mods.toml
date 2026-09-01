@@ -4,7 +4,7 @@ license="MIT"
 
 [[mods]]
 modId="doomedru"
-version="1.0.0"
+version="1.1.2"
 displayName="Doomed RU"
 description='''
 Русификатор интерфейса мода Doomed. Подменяет строки на лету по словарю
@@ -27,8 +27,8 @@ config/doomedru/ru_ru.json. Сам Doomed не изменяется.
 
 [[dependencies.doomedru]]
     modId="doomedmatu"
-    mandatory=false
-    versionRange="[0.1.0,)"
+    mandatory=true
+    versionRange="[0.3.9,0.4.0)"
     ordering="AFTER"
     side="CLIENT"
 

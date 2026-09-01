@@ -3,7 +3,7 @@ Specification-Title: doomedru
 Specification-Vendor: doomedru
 Specification-Version: 1
 Implementation-Title: DoomedRU
-Implementation-Version: 1.0.0
+Implementation-Version: 1.1.2
 Implementation-Vendor: doomedru
 MixinConfigs: doomedru.mixins.json,doomedru.global.mixins.json
 

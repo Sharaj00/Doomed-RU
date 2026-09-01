@@ -16,9 +16,9 @@ import java.util.concurrent.ConcurrentHashMap;
  *                                который мод отдаёт через Component.literal,
  *                                включая подписи виджетов и подсказки.
  *                                Выключается флагом -Ddoomedru.globalHook=false.
- * doomedru.mixins.json         - точечный перехват внутри классов Doomed.
- *                                Дополняет основной: ловит строки, которые мод
- *                                рисует напрямую, минуя Component.
+ * doomedru.mixins.json         - узкие исправления для конкретных механизмов
+ *                                Doomed: перевод WITNESS и панели состояния
+ *                                до обрезки, стабильная выдача мыслей.
  */
 public class DoomedRuMixinPlugin implements IMixinConfigPlugin {
 

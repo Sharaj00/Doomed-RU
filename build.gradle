@@ -5,7 +5,7 @@ plugins {
     id 'org.spongepowered.mixin'  version '0.7.+'
 }
 
-version = '1.0.0'
+version = '1.1.2'
 group   = 'ru.doomedru'
 archivesBaseName = 'doomedru'
 
@@ -60,7 +60,7 @@ gradle.taskGraph.whenReady {
     if (doomedJars.isEmpty()) {
         throw new GradleException(
             "\n\n  Положите jar мода Doomed в папку libs/ и повторите сборку.\n" +
-            "  Например: libs/doomedmatu0.3.6.jar\n" +
+            "  Например: libs/doomedmatu-0.3.9.jar\n" +
             "  Он нужен только на время компиляции и в готовый мод не войдёт.\n" +
             "  Без него Mixin не сможет проверить классы-цели и сборка упадёт.\n")
     }

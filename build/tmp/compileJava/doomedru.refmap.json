@@ -1,13 +1,5 @@
 {
   "mappings": {
-    "ru/doomedru/mixin/DoomedTextMixin": {
-      "Lnet/minecraft/client/gui/GuiGraphics;drawCenteredString(Lnet/minecraft/client/gui/Font;Ljava/lang/String;III)V": "Lnet/minecraft/client/gui/GuiGraphics;m_280137_(Lnet/minecraft/client/gui/Font;Ljava/lang/String;III)V",
-      "Lnet/minecraft/network/chat/Component;literal(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;": "Lnet/minecraft/network/chat/Component;m_237113_(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;",
-      "Lnet/minecraft/client/gui/GuiGraphics;drawString(Lnet/minecraft/client/gui/Font;Ljava/lang/String;IIIZ)I": "Lnet/minecraft/client/gui/GuiGraphics;m_280056_(Lnet/minecraft/client/gui/Font;Ljava/lang/String;IIIZ)I",
-      "Lnet/minecraft/client/gui/GuiGraphics;drawString(Lnet/minecraft/client/gui/Font;Ljava/lang/String;III)I": "Lnet/minecraft/client/gui/GuiGraphics;m_280488_(Lnet/minecraft/client/gui/Font;Ljava/lang/String;III)I",
-      "Lnet/minecraft/client/gui/Font;width(Ljava/lang/String;)I": "Lnet/minecraft/client/gui/Font;m_92895_(Ljava/lang/String;)I",
-      "Lnet/minecraft/network/chat/Component;nullToEmpty(Ljava/lang/String;)Lnet/minecraft/network/chat/Component;": "Lnet/minecraft/network/chat/Component;m_130674_(Ljava/lang/String;)Lnet/minecraft/network/chat/Component;"
-    },
     "ru/doomedru/mixin/global/FontMixin": {
       "width(Ljava/lang/String;)I": "Lnet/minecraft/client/gui/Font;m_92895_(Ljava/lang/String;)I"
     },
@@ -22,14 +14,6 @@
   },
   "data": {
     "searge": {
-      "ru/doomedru/mixin/DoomedTextMixin": {
-        "Lnet/minecraft/client/gui/GuiGraphics;drawCenteredString(Lnet/minecraft/client/gui/Font;Ljava/lang/String;III)V": "Lnet/minecraft/client/gui/GuiGraphics;m_280137_(Lnet/minecraft/client/gui/Font;Ljava/lang/String;III)V",
-        "Lnet/minecraft/network/chat/Component;literal(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;": "Lnet/minecraft/network/chat/Component;m_237113_(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;",
-        "Lnet/minecraft/client/gui/GuiGraphics;drawString(Lnet/minecraft/client/gui/Font;Ljava/lang/String;IIIZ)I": "Lnet/minecraft/client/gui/GuiGraphics;m_280056_(Lnet/minecraft/client/gui/Font;Ljava/lang/String;IIIZ)I",
-        "Lnet/minecraft/client/gui/GuiGraphics;drawString(Lnet/minecraft/client/gui/Font;Ljava/lang/String;III)I": "Lnet/minecraft/client/gui/GuiGraphics;m_280488_(Lnet/minecraft/client/gui/Font;Ljava/lang/String;III)I",
-        "Lnet/minecraft/client/gui/Font;width(Ljava/lang/String;)I": "Lnet/minecraft/client/gui/Font;m_92895_(Ljava/lang/String;)I",
-        "Lnet/minecraft/network/chat/Component;nullToEmpty(Ljava/lang/String;)Lnet/minecraft/network/chat/Component;": "Lnet/minecraft/network/chat/Component;m_130674_(Ljava/lang/String;)Lnet/minecraft/network/chat/Component;"
-      },
       "ru/doomedru/mixin/global/FontMixin": {
         "width(Ljava/lang/String;)I": "Lnet/minecraft/client/gui/Font;m_92895_(Ljava/lang/String;)I"
       },
