@@ -1,12 +1,12 @@
 # Doomed RU
 
 Russian localization for **[Doomed](https://www.curseforge.com/minecraft/mc-mods/doomed)**
-(`doomedmatu`) 0.3.6 — Minecraft 1.20.1, Forge.
+(`doomedmatu`) 0.3.9 — Minecraft 1.20.1, Forge.
 
 *[Русская версия](README.ru.md)*
 
 Client-side only. **The Doomed jar is never modified** — keep the original
-`doomedmatu-0.3.6.jar` and drop this addon next to it.
+`doomedmatu-0.3.9.jar` and drop this addon next to it.
 
 ---
 
@@ -17,16 +17,16 @@ different approach. This addon covers all three.
 
 | Channel | Volume | How it is translated | Status |
 |---|---|---|---|
-| `lang/en_us.json` — proper translation keys | 929 keys | a normal lang file | **929 / 929** |
-| Hardcoded string literals in code | ~8 700 constants | runtime substitution | ~75 % |
-| Datapack JSON — journal, traders, imaginary friend, advancements | 162 entries | runtime substitution, whole entries | **162 / 162** |
+| `lang/en_us.json` — proper translation keys | 1006 keys | a normal lang file | **1006 / 1006** |
+| Hardcoded string literals in code | ~9 200 constants | runtime substitution | ~68 % |
+| Datapack JSON — journal, traders, imaginary friend, advancements | 164 unique entries | runtime substitution, whole entries | **164 / 164** |
 
 Item names, block names, tooltips and subtitles come from the first channel,
 so they are handled by an ordinary resource-pack lang file and need no tricks.
 
 Almost everything else — the HUD, the triage panel, the WITNESS tablet, the
 settings screen, the mode-select screen — is **hardcoded English string
-literals**. There are 895 `Component.literal(...)` call sites in the mod. No
+literals**. There are hundreds of `Component.literal(...)` call sites in the mod. No
 lang file can reach them, which is why this addon exists at all.
 
 ---
@@ -43,9 +43,14 @@ Mixin layers:
 measured. One hook covers button labels, screen titles, item tooltips, word
 wrapping, and text drawn by vanilla widgets on the mod's behalf.
 
-**Secondary — `DoomedTextMixin`.** Targets 178 Doomed classes and catches
-strings drawn straight to the screen, bypassing `Component`:
-`GuiGraphics.drawString`, `drawCenteredString`, `Font.width`.
+**Secondary — `GuiGraphicsMixin` and `FontMixin`.** Catches strings drawn
+straight to the screen, bypassing `Component`: `GuiGraphics.drawString`,
+`drawCenteredString`, `Font.width`.
+
+Three narrow Mixins handle WITNESS, the status panel, and animated thoughts:
+full labels are translated before wrapping or clipping, while thoughts reveal
+a stable Russian line during the typewriter effect. They do not redirect every
+method in every Doomed class, so target-method staticness cannot conflict.
 
 The intercepted string is looked up in a dictionary and replaced on the way to
 the renderer. The `Component` object itself is never mutated, so mod logic that
@@ -77,6 +82,11 @@ A string on its way to the screen is tested in this order:
    string can never be a dictionary key, so it is translated sentence by
    sentence, longest known chunk first.
 
+Character thoughts use a stricter path: the addon translates the known full
+line first and only then reveals the same fraction of its Russian text. Shared
+prefixes between different lines can therefore no longer switch translations
+between frames.
+
 Every result is cached, so nothing is recomputed per frame. The cache is
 capped and cleared on overflow — HUD readouts produce an unbounded stream of
 distinct strings.
@@ -92,8 +102,8 @@ phrases are unique enough to translate anywhere.
 
 ## Install
 
-1. Build (or download) `doomedru-1.0.0.jar`.
-2. Drop it into `.minecraft/mods` next to `doomedmatu-0.3.6.jar`.
+1. Build (or download) `doomedru-1.1.2.jar`.
+2. Drop it into `.minecraft/mods` next to `doomedmatu-0.3.9.jar`.
 
 Client-side only — do not install it on a server.
 
@@ -130,14 +140,14 @@ Any string can be overridden without rebuilding — put it in
 ## Build
 
 Needs **JDK 17** and the Doomed jar in `libs/` (compile-time only — the Mixin
-annotation processor verifies the 178 target classes exist; it is not bundled
+annotation processor verifies that the target classes exist; it is not bundled
 into the output).
 
 ```
 gradlew.bat build
 ```
 
-The result is `build/libs/doomedru-1.0.0.jar`.
+The result is `build/libs/doomedru-1.1.2.jar`.
 
 The Gradle wrapper binary is not included — take `gradlew`, `gradlew.bat` and
 `gradle/` from the official [Forge 1.20.1 MDK](https://files.minecraftforge.net/net/minecraftforge/forge/index_1.20.1.html).
@@ -152,7 +162,6 @@ The dictionary is verified against the mod's jar, not guessed from gameplay.
 python3 tools/extract_strings.py     # ground truth: every string in the jar
 python3 tools/audit_dict.py          # coverage, typography, term consistency
 python3 tools/audit_dict.py --by-class   # what is still left, as a work queue
-python3 tools/gen_targets.py         # rebuild the Mixin target list
 ```
 
 `extract_strings.py` reads three sources: the constant pool of every class,
@@ -161,17 +170,17 @@ recipes** — javac stores `"You are tiring (" + n + "% stamina)..."` as a
 single constant with markers — and turns them into `{}` pattern keys. That is
 how moodle descriptions with live values get translated.
 
-Run all four after a Doomed update; the audit will show what changed.
+Run extraction and the audit after a Doomed update; they will show what changed.
 
 ---
 
 ## Current coverage
 
 ```
-lang keys           929 / 929
-narrative text      162 / 162   (20 354 characters)
-dictionary        4 944 strings + 102 patterns
-still untranslated 1 441 strings (96 583 chars) + 688 patterns
+lang keys          1006 / 1006
+narrative text      164 / 164   (20 426 characters)
+dictionary        5 074 strings + 278 patterns
+still untranslated 1 645 strings (107 607 chars) + 596 patterns
 ```
 
 Most of what remains is config descriptions — long paragraphs visible only in
@@ -188,16 +197,16 @@ so most of the interface is hardcoded English rather than translation keys.
 Every localization therefore has to intercept rendering instead of shipping a
 lang file.
 
-The Chinese `zh_cn.json` in the jar shows the effect clearly: it covers 912 of
-929 lang keys — genuinely complete for that channel — yet a Chinese player
+The Chinese `zh_cn.json` in the jar shows the effect clearly: it covers 960 of
+1006 lang keys — nearly complete for that channel — yet a Chinese player
 still sees an entirely English HUD, triage panel and tablet, because those
 strings never pass through the lang system.
 
 Moving the UI text to `Component.translatable(...)` keys would let every
 language ship as a plain resource pack, and addons like this one could shrink
 to a lang file. If that is ever interesting, the extracted string inventory in
-`build/doomedru-strings.json` is a ready-made starting point: 8 700 constants
-and 821 concat templates, grouped by class.
+`build/doomedru-strings.json` is a ready-made starting point: 9 191 constants
+and 908 concat templates, grouped by class.
 
 No pressure either way — the mod is excellent, and this is offered as data
 rather than a complaint.
