@@ -148,7 +148,9 @@ def main():
     if len(sys.argv) == 2:
         jar = Path(sys.argv[1])
     else:
-        jars = sorted((ROOT / "libs").glob("*.jar"))
+        # В libs могут лежать обязательные зависимости Doomed (например,
+        # doomedguns). Для анализа всегда выбираем сам основной мод.
+        jars = sorted((ROOT / "libs").glob("doomedmatu-*.jar"))
         if not jars:
             sys.exit(__doc__)
         jar = jars[0]

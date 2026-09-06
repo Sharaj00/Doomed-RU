@@ -258,6 +258,7 @@ $.viewmodel.sight_rotation
 /doom mode default | /doom mode matu
 /doom preset clinic - a medical sandbox. It switches off the survival pressure (hunger, thirst, stamina, temperature, spoilage, monsters, trap worldgen and grabbers) and leaves every medical system running. It only ever turns whole systems off, so you can switch any single one back on in doomedmatu-server.toml afterwards.\n/doom preset reset - puts every server option back to the value it shipped with.
 /min
+0 disables this presentation; server-owned accuracy, disease, pain and consciousness
 0 · arrest rhythm
 0.01-0.1 mSv/h
 0.1-1 Sv
@@ -267,7 +268,7 @@ $.viewmodel.sight_rotation
 1-10 mSv
 1-10 mSv/h
 1-4 Sv
-1-8 ACQUIRE   ARROWS SELECT   ENTER CONFIRM
+1-8 BUY   ARROWS SELECT   ENTER BUY
 1.21 Gigawatts
 10-100 mSv
 10-100 mSv/h
@@ -310,6 +311,7 @@ A SCORCHED HULL means one wire bank is sabotaged - read its note on the wire pag
 A bacterial fever is burning through you.
 A bacterial fever. Antibiotics cure it; food, water and warmth help you fight it.
 A bacterial infection is burning through your blood. Antibiotics cure it - and surviving it means you can never catch it again.
+A bad landing can take a leg. A dirty wound can finish the job hours later. Pain can turn simple work into a fight.\n\nYou can still leave.
 A bed or wool is a comfortable rest and recovers energy far faster, leaving only light grogginess. The bare floor is a rough nap: slow, and it gives up sooner because you cannot rest well on stone.
 A better head for medicine than most people start with.
 A bone just snapped. Splint it - the limb stays useless either way, but it knits in minutes instead of most of an hour.
@@ -462,6 +464,7 @@ ABSTINENCE ACTIVE. Dependence is falling. Smoking pauses recovery and raises the
 AB_NEGATIVE
 AB_POSITIVE
 ACCEPTED
+ACCEPTING
 ACCESS DENIED · BUREAU AUTHORITY REQUIRED
 ACCOUNT CREDIT
 ACTIVATED CHARCOAL / WAIT IT OUT
@@ -475,6 +478,8 @@ ACTIVE · {}
 ACTIVE_HEMORRHAGE
 ACUTE TRAUMA
 ADAPTIVE_EYES
+ADD
+ADD ITEM
 ADDICTIVE
 ADDITIONAL ROOT CASES
 ADDITIVE
@@ -539,6 +544,11 @@ ANCHOR_IMPALE_WINDUP
 ANCHOR_PLANT
 ANCHOR_POP
 ANCHOR_RELEASE
+ANCHOR_UNAVAILABLE
+ANNIHILATION LANDMINES
+ANNIHILATION OVERRIDE  ×%.3f
+ANNIHILATION OVERRIDE  ×%.{}f
+ANNIHILATION_LANDMINES
 ANOMALY
 ANSWER
 ANTERIOR
@@ -556,6 +566,8 @@ ANTIVENOM · OXYLINE BRIDGE
 ANTIVIRAL
 APPEARANCE
 APPENDICULAR_BONE
+APPLIED
+APPLY
 APPLY HEAT / TAKE SHELTER
 APPLY_LIMB_MED
 APPROVED
@@ -572,6 +584,7 @@ ARREST RHYTHM
 ARREST RISK - RESTORE PRESSURE & RHYTHM
 ARROW
 ARROW + {} FRAG
+ARTERIAL_LACERATION
 AS-114
 AS-{}
 ASPIRATE
@@ -581,6 +594,7 @@ ASSISTANCE
 ASYSTOLE
 ATTEMPT rarity for trader lairs in eligible newly generated chunks. 24 (default) =
 ATTEMPT rarity for trader lairs in eligible newly generated chunks. {} (default) =
+ATTEMPTS
 AUDIO
 AURELION-2
 AURELION-{}
@@ -624,6 +638,7 @@ Active neurological injury · control the driver and protect perfusion.
 Active playtime, in hours, for a MATU character to complete the transformation. The four growth spurts occur at 25%, 50%, 75% and 100%. Default 168 is one full week of active play. This does not use paceFactor. Changing it also reinterprets the stored progress of existing MATU characters against the new timeline; lowering it may make their next spurt begin immediately.
 Active playtime, in hours, for a MATU character to complete the transformation. The four growth spurts occur at {}%, {}%, {}% and {}%. Default {} is one full week of active play. This does not use paceFactor. Changing it also reinterprets the stored progress of existing MATU characters against the new timeline; lowering it may make their next spurt begin immediately.
 Active spurt
+ActiveTicks
 Actual effect scales with the wrap completed in the body-panel procedure.
 Actual-dimension policy for all Doomed generated content. Biome eligibility remains a
 Acute radiation sickness. Get clear of the source and take anti-rad now.
@@ -697,9 +712,9 @@ An inspired choice! Completely fatal in every conceivable way, but inspired none
 An irregular outward tear opens through the surface
 An irreversible prion disease. Support breathing, nutrition and aspiration complications; no drug reverses the underlying course.
 An ordinary splint cannot immobilise this region.
-Anaemic
 Analyzing… do not touch the patient{}
 Anatomy
+Anchor
 And what are you made of?
 AngularX
 AngularY
@@ -765,6 +780,7 @@ Assess persistent loss of lung function
 Asset-facing access denied. Telemetry flows one way.
 Assets
 Assistance
+Assisted
 At least one legacy config path must be registered
 At least one wound is infected.
 At least you won't have to carry the burden of conscious thought anymore.
@@ -790,8 +806,7 @@ BAD VESSEL
 BALANCE  +{}
 BALANCE  {}
 BANDAGE
-BANK  +{}
-BARTER CASE  /  SESSION STOCK
+BARTER CASE  /  CURRENT STOCK
 BARTER CONTACT
 BATCH HOMOGENIZATION
 BATCH INPUT LOST
@@ -802,6 +817,9 @@ BEFORE IT STOPPED
 BEGIN GUIDED MIRROR SESSION
 BELOW {}
 BEST_CLEAR_PARTIAL
+BIND_DISTAL
+BIND_PROXIMAL
+BIOAEROSOL
 BIOCHEM
 BIOLOGICAL
 BIOLOGICAL LIMB ABSENT // PROSTHESIS FITTED
@@ -833,6 +851,7 @@ BLOODLOSS VIGNETTE
 BLOOD_FLOOR
 BLOOD_GRACE
 BLUNT
+BLUNTED
 BOB
 BODY
 BODY & PUPPET
@@ -844,6 +863,8 @@ BOLT_RESEATED
 BONE
 BONE_WELD
 BOOBY
+BOOLEAN
+BOSS
 BOTANICAL
 BOTH
 BOTH EXTREMES ARE CARDIAC
@@ -859,6 +880,7 @@ BP {} · blood {} L
 BP {}/{}
 BP {}/{}{}
 BPM {}
+BRACE AGAINST THE BODY / GROUND
 BRACED
 BRACED_DRIFT
 BRACED_HEAVY
@@ -870,6 +892,7 @@ BRAIN AT RISK
 BRAIN DEATH IS THE REAL DEATH
 BRAIN STATIC
 BRAIN_DYING
+BRAZIER
 BREACH
 BREAK
 BREAKING
@@ -885,6 +908,8 @@ BUDGET_RESERVATION_LOST
 BUFFER EMPTY
 BUFFER TOO LOW
 BUREAU
+BUREAU // D-17
+BUREAU // D-{}
 BUREAU ARCHIVE
 BUREAU UPLINK
 BUREAU UPLINK ........... 
@@ -905,12 +930,13 @@ Badly rested
 Bag
 BagInv
 Balaclava
-Balance after release: {}
+Balance after purchase: {}
 Bandage - {}
 Bandolier
-Bankable now: {} credit
 Base game ticks between shelf replenishments at an average shelter. 48000 (default), about
 Base game ticks between shelf replenishments at an average shelter. {} (default), about
+Baseline iron use is 1.6x and red cells rebuild at 0.45x. Standing after at least 1.5 seconds crouched, prone or in bed can grey your vision or make you collapse when iron, oxygen delivery or blood pressure is low.
+Baseline iron use is {}x and red cells rebuild at {}x. Standing after at least {} seconds crouched, prone or in bed can grey your vision or make you collapse when iron, oxygen delivery or blood pressure is low.
 Batch
 Batch progress: {}%
 Batch: {}
@@ -937,7 +963,6 @@ Best bet: {}
 Beware the watching walls. I know how that sounds, im aware, but the eyes down there are attached to something and it is not attached to anything good.
 Beyond you - the blade slips and opens your forearms.
 Bias
-Binding   -   Set {}%   -   RMB / ESC to stop
 Bioaerosols
 Biome eligibility still requires #doomedmatu:creature_spawn_biomes. Spawners, commands,
 Biome: {}
@@ -986,6 +1011,8 @@ BloodPathogens
 Bloom
 Blue receives; orange ejects
 Blur
+BoardHeight
+BoardWidth
 Body Sprites
 Body status
 Body temperature is falling. Get dry, find shelter and use a heat source. Insulation only slows further heat loss.
@@ -1004,13 +1031,13 @@ Bones tolerate {}% less punishment. Falls that others walk away from break you.
 Booby
 Bookkeeping rather than a setting: it records that the one-time presentation defaults have already been applied to this server. Leave it alone. Setting it back to 0 lets the mod overwrite a forced chat colour you deliberately set to pure white the next time the world loads.
 Bookkeeping rather than a setting: it records that the one-time presentation defaults have already been applied to this server. Leave it alone. Setting it back to {} lets the mod overwrite a forced chat colour you deliberately set to pure white the next time the world loads.
+Boolean
 Both
 Both eyes are absent; visual telemetry cannot be restored by ordinary treatment.
 Bottom Left
 Bottom Right
-Bound too tight
 Bounded world fog only. Spores, sound, detection and attacks remain unchanged.
-Brace is slack
+Brace the limb; hold until its weight settles
 Bracing the abdomen
 Brain Damage
 Brain Failure
@@ -1068,6 +1095,8 @@ CALF
 CALF_LEFT
 CALF_RIGHT
 CAMERA & MOTION
+CAMPFIRE
+CANCELLED
 CAR
 CARDIAC
 CARDIAC ARREST
@@ -1079,13 +1108,14 @@ CARDIAC_FAILURE
 CARDIO
 CARDIO TRACE
 CARDIOVASCULAR
+CARD_SCHEMA_MISMATCH
+CARD_VERSION_UNAVAILABLE
 CARE / PACK
 CARE {}/{} / PACK
 CARRY AND COLD
 CARRY SYSTEM
 CARVE
 CASCADE
-CASE EMPTY
 CASE EVIDENCE
 CASE MAP
 CASE NOTES
@@ -1126,8 +1156,10 @@ CHARGE
 CHARGED DEFIB / AMIODARONE
 CHAT
 CHAT & VOICE
+CHECKSUM_MISMATCH
 CHECK_RHYTHM
 CHEM
+CHEMICAL_VAPOUR
 CHEMISTRY
 CHEMISTRY + ENVIRONMENT
 CHEST COMPRESSIONS
@@ -1171,6 +1203,7 @@ CLOTTED
 CLOTTING
 CLR
 CODE
+CODE_TOO_LARGE
 COLD
 COLD FROST
 COLD IS THE USUAL CULPRIT
@@ -1186,18 +1219,27 @@ COLUMN C
 COMBINED
 COMBINED CLEARANCE FAILURE
 COMBINED HEMORRHAGE
+COMBUSTION_SMOKE
 COMMITTED_AREA_RESOLUTION
 COMMITTED_FATAL_ENTRY
 COMMITTED_MOUTH_CONE
+COMMIT_CALLBACK_FAILED
+COMMIT_IN_PROGRESS
 COMPATIBLE
 COMPATIBLE BLOOD · OXYLINE BRIDGE
 COMPENSATION EXHAUSTED
+COMPLETE
+COMPLETED
 COMPLICATION
 COMPRESS
 COMPRESSED
+COMPRESSED_TOO_LARGE
 COMPRESSIONS {}
+COMPRESSION_INVALID
 COMPROMISED
 CONDITION
+CONDITION // 07
+CONDITION // {}
 CONDITION CANNOT BE SUSTAINED
 CONDITION UNSTABLE // {}
 CONDITIONS
@@ -1225,6 +1267,7 @@ CONTAMINATION
 CONTAMINATION DETECTED
 CONTENTS
 CONTEXT
+CONTINUE
 CONTINUE COURSE · CONTROL SOURCES
 CONTINUE MONITORING
 CONTINUITY
@@ -1250,12 +1293,10 @@ CORE TEMPERATURE INCOMPATIBLE WITH FUNCTION
 CORE {}
 COREBOUND
 COSMETIC
-COST  {} CR
 COUNCIL
 COURSE
 COVER_OR_ANATOMY_LOSS
 COVER_OR_SUPPORT_LOSS
-COWARD
 CPR
 CPR needs two functional hands
 CPR only buys time. Prepare epinephrine and assess rhythm.
@@ -1277,6 +1318,8 @@ CRUSH
 CRUSHING
 CUE
 CULTIVATION
+CURRENT  ×%.3f
+CURRENT  ×%.{}f
 CURRENT INCIDENT
 CURRENT SYSTEM LOAD
 CURRENT TRAJECTORY
@@ -1319,13 +1362,12 @@ Cannibal
 Cannibalism is retained as an event in WITNESS, not treated as a permanent active illness. Immediate disgust, nausea and trauma recover through the ordinary psychological systems and abstinence.
 Cannot bleed or become infected; wears down instead of healing.
 Cannot restore {} while {} is still missing.
-Cap (0.0-1.0) on camera movement caused by ILLNESS - the hepatic flap, kuru's
+Cap (0.0-1.0) on camera movement caused by the simulated BODY - low-consciousness
 Cap (0.0-1.0) scaling the BLOOD & GORE visuals - blood on limbs, face/eye-socket blood, and ground blood pools. 1.0 = full, 0.0 = none. (Flying severed limbs and burst particles are gameplay, not scaled by this.)
-Cap ({}-{}) on camera movement caused by ILLNESS - the hepatic flap, kuru's
+Cap ({}-{}) on camera movement caused by the simulated BODY - low-consciousness
 Cap ({}-{}) scaling the BLOOD & GORE visuals - blood on limbs, face/eye-socket blood, and ground blood pools. {} = full, {} = none. (Flying severed limbs and burst particles are gameplay, not scaled by this.)
 Capacity
 Capillary refill is assessed at a hand or foot, not this region.
-Caps camera movement from tremor, ataxia and septic rigors.
 CapsuleBooby
 CapsuleLive
 CapsuleSeed
@@ -1334,6 +1376,7 @@ CapturedAt
 Cardiac Arrest
 Cardiovascular - Heart rate: %.1f bpm | Blood pressure: %.0f/%.0f | Fibrillation: %.1f%% | SpO2: %.0f%% | Respiration: %.1f/min | Brain health: %.1f%% | Cardiac arrest: %s
 Cardiovascular - Heart rate: %.{}f bpm | Blood pressure: %.{}f/%.{}f | Fibrillation: %.{}f%% | SpO{}: %.{}f%% | Respiration: %.{}f/min | Brain health: %.{}f%% | Cardiac arrest: %s
+Cards
 Carry a bone saw before opening the cadaver.
 Carry one medical suture to close the transplant incision.
 Catalyst material
@@ -1420,9 +1463,10 @@ Clear the airway obstruction
 Cleared the pending refusal. The sequence can be started again.
 Cleared {} record(s) from the held journal.
 Click a Doomed scalar rule to edit it on the server.
+Click a binding to loosen it, then recheck
 Click a limb // PNG proportions preserved
 Click a region to inspect it. Return to the body panel to apply treatment.
-Click or press [{}] to acquire.
+Click or press [{}] to buy.
 Click to open this machine's recipes.
 Client Light: 0 (0 sky, 0 block)
 Client Light: {} ({} sky, {} block)
@@ -1439,6 +1483,11 @@ ClimateMeasured
 Clinical process equipment.
 Clinical stage
 Clinical value is unknown
+ClinicalBody
+ClinicalIncident
+ClinicalOwner
+ClinicalState
+ClockFloorMillis
 Close
 Close the abdominal wall - draw each stitch across the incision
 Closed wound: keep it protected and watch for bleeding, heat, swelling or renewed contamination.
@@ -1472,8 +1521,10 @@ CompatibleBloodOxygen
 CompatibleBloodRedCells
 Compensatory overuse
 Complete each whole round. Press each flashed colour back as a DIFFERENT
+CompletionLatched
 Concussion
 Cond
+Condition Motion
 Condition decays with time{}
 Condition must be between 0 and 100.
 Condition must be between {} and {}.
@@ -1481,6 +1532,7 @@ Condition replenishes under its implemented passive cycle.
 Condition {}% - {}
 Configurable
 Configuration
+Configure authored world-wide run rules.
 Confirm that live telemetry is updating
 Confirm what the fluid contains before placing a drain
 Confirmed blood in the pleural space is restricting ventilation.
@@ -1507,7 +1559,6 @@ Consistent with thoracic muscle failure · ventilation is inadequate.
 Construction
 Containment Asset
 Contaminated
-Contaminated - hold it in a flame to sterilize
 Contaminated tract: disinfect this wound. Established infection may also require systemic antibiotics.
 Contamination: {}% ±{}
 ContaminationEstimate
@@ -1528,6 +1579,7 @@ Continue the active antiviral course
 Continue warming without burning damaged tissue
 Continuity module idle. No active structural drift.
 Continuous fluid equipment.
+Contract
 Control every infected source, administer appropriate antibiotics, and support circulation. Advanced sepsis can destabilize pressure and organ function.
 Control every infected source. The drug buys time; it does not clean the wound for you.
 Control every remaining wound source
@@ -1568,7 +1620,9 @@ Could be sharper. Go play something.
 Could eat anything right now.
 Could not bootstrap shipped chemistry data for client recipe display: {}
 Could not find a clear sky-drop start in that column.
+Could not load Endowed authored character geometry {}
 Count
+Cover and close the open wound before securing a splint over the region.
 Coverage: {}
 Crack the pod by DISARMING every module before the countdown reaches zero or your
 Craft
@@ -1634,10 +1688,15 @@ CystSourceType
 CystSpores
 DANGER ZONE
 DAY {}
+DCR1.
+DCR1.{}.{}
+DCR{}.
 DEAD
 DEATH
 DEATH_COLLAPSE
 DEBRIS
+DECIMAL
+DECOMPRESSED_TOO_LARGE
 DECRYPT COMPLETE · OVERRIDE AVAILABLE
 DECRYPTED
 DEEP
@@ -1660,6 +1719,8 @@ DEPOSITION PRESENT
 DESCEND
 DESPAIR DARKENING
 DESTROY_FAILED
+DETACH PROSTHETIC
+DETACHING...
 DETECTED
 DETERIORATING
 DETONATED
@@ -1684,7 +1745,9 @@ DISINFECT
 DISLOCATED
 DISLOC_BARE
 DISLOC_WRENCH
+DISTAL
 DISTAL FAILURE
+DISTAL PERFUSION REDUCED
 DISTANT_GROWL
 DO NOT RELEASE - TEAR FREE
 DO NOT TRANSFUSE AGAIN
@@ -1729,6 +1792,8 @@ DRY
 DRYING_OVEN
 DRY_SUPPLY
 DUD
+DUPLICATE_CARD
+DUPLICATE_IDENTITY
 Damage
 Damage model
 Damp
@@ -1737,8 +1802,10 @@ Dark Energy Manipulator
 Darkness slowly opens up to you. Sudden light does not forgive it.
 Dazed
 Deadline
+DeadlineMillis
 Death occurs at brain death. Hearts are not your life.
 DeathAftermathPlaced
+Decimal
 Decorative pulse and trace motion is frozen; readings and warnings remain unchanged.
 Deep Maw - Visual Effects
 Deep Maw Effects
@@ -1757,6 +1824,7 @@ Defibrillation does not lower potassium.
 Defibrillation may fail while potassium remains high.
 Dehydrated
 Dehydration reduces the body's fluid reserve and progressively compromises performance and circulation.
+Deliberately separate from screenShake, which covers impacts and combat juice.
 Demand-fed
 Dependence runs in four stages, and the mood cost of going without climbs steeply with each - the deepest stage is a penalty large enough to matter on a body where mood drives despair. Quitting recovers only while you are awake, unsated and playing, and the deepest stage takes several active days to clear. Death does not reset it.
 Dependency
@@ -1768,6 +1836,9 @@ Desat
 Designation\nContainment Asset #DR-01\nName\n████████\nstruck from record\nOrigin\nFacility Z-9\nClearance\nwhite · experimental · disposable\nClass\nviable stable human-core interface\nStatus\nfield-active →\n"lost in action"\nRecovery\nauthorization standing · tracking active\nMonetary value\nnot applicable · non-transferable\nReplication\nmaximum · see\nAURELION-2\nDisposition\nRETAIN · see\nclause 14(c)\nprototype\nDesignation was reassigned following the Z-9 event. Personal identifiers were withheld from the operational record under asset-handling procedure. The subject is carried only as a category.\nDeployment is authorized into active\nRadius\nzones where standard operatives do not survive entry. Success metrics rank containment stability above subject integrity.\nSubject vacated custody during the AURELION-2 intake window. The public record reads as a loss in action while recovery authorization remains standing internally.\nAnalysis note: subject and assigned unit no longer register properly against local reference. Refer to\nthe file flagged corrupt\n.\n
 Designation\nContainment Asset #DR-{}\nName\n████████\nstruck from record\nOrigin\nFacility Z-{}\nClearance\nwhite · experimental · disposable\nClass\nviable stable human-core interface\nStatus\nfield-active →\n"lost in action"\nRecovery\nauthorization standing · tracking active\nMonetary value\nnot applicable · non-transferable\nReplication\nmaximum · see\nAURELION-{}\nDisposition\nRETAIN · see\nclause {}(c)\nprototype\nDesignation was reassigned following the Z-{} event. Personal identifiers were withheld from the operational record under asset-handling procedure. The subject is carried only as a category.\nDeployment is authorized into active\nRadius\nzones where standard operatives do not survive entry. Success metrics rank containment stability above subject integrity.\nSubject vacated custody during the AURELION-{} intake window. The public record reads as a loss in action while recovery authorization remains standing internally.\nAnalysis note: subject and assigned unit no longer register properly against local reference. Refer to\nthe file flagged corrupt\n.\n
 Designation for personnel maintained past clinical surrender and returned to service. The body is held to a discipline scaffold and a kill-permission lattice that operates without consent.\nCasualty handling was revised to match. A unit lost in the field is logged as\nrecoverable material\nand routed to a\nprocessing site\n.\nField note, recovered: a returned unit\nanswered in the dead sergeant's voice\n.\n
+Detach below; the fitted limb drops at your feet.
+Detaching {} prosthetic - item will drop at your feet
+Detachment request awaiting server authority.
 Detonates the collar and ends this life. Four confirmations required.
 Detonation request sent to the server.
 Diagnostic
@@ -1804,6 +1875,8 @@ Dislocated {}.
 Dislocation
 Display accepted chat above the player model.
 Display only. The simulation and medical thresholds remain Celsius.
+Distal perfusion
+Distal perfusion · {}
 Distance is the only reliable early warning. Use cave geometry and solid cover before recognition becomes direct pursuit.
 Do not fit a load-bearing socket yet. Control bleeding and infection, close and dress the stump, then allow tissue to heal.
 Do not give additional donor blood until compatibility is resolved
@@ -1831,6 +1904,7 @@ Doomed - Extract Arrow
 Doomed - HUD & Units
 Doomed - Injection
 Doomed - Interface Accent
+Doomed - Landmine
 Doomed - Landmine Defusal
 Doomed - Last Stand
 Doomed - Lockpick
@@ -1897,6 +1971,7 @@ DoomedPoseMat
 DoomedRechargerGift
 DoomedSalineOpenSeconds
 DoomedSalineOpenedStamp
+DoomedSplintCondition
 DoomedThreatContributions
 DoomedTime
 Dose rate
@@ -1906,6 +1981,7 @@ Drag a treatment from the hotbar onto a body region.
 Drag freely; changes save when released.
 Drag moodles, preview needs, choose units and place the live HUD.
 Drag onto an amputated arm or leg in the health panel.
+Drag the padded rails along the limb; span the injury and adjacent joint
 Drag the sample moodles. Arrow keys nudge; Shift moves 10 px.
 Drag the sample moodles. Arrow keys nudge; Shift moves {} px.
 Drag the sample stack to change this automatically, or choose an exact corner here.
@@ -1917,6 +1993,8 @@ Drain the current consolidation window before {} expires
 Drainable window
 Drained
 Draw it slowly straight UP - don't jerk or drag sideways
+Draw the first binding away from the injury · pull until the rail stops shifting
+Draw the second binding on the far side · watch the tissue, not a gauge
 Drawing a deliberate deep breath
 Drawing it out the entry...
 Drawing out the entry
@@ -1965,7 +2043,7 @@ END
 END ME ALREADY.
 END OF CONTACT
 ENERGY
-ENTER TO ACQUIRE
+ENTER TO BUY
 ENTER {}/{} // STAGE {}/3
 ENTITY LINK
 ENVELOPE_EXPANSION_BLOCKED
@@ -2037,6 +2115,7 @@ Empty - fill it with a drug fluid
 Empty both hands before applying direct pressure.
 Empty both hands before starting chest compressions.
 Enable camera and GUI screen shake effects.
+Enabled
 Enables the full medical vision pipeline where supported.
 Encumbered
 Endless
@@ -2064,6 +2143,8 @@ Epinephrine 15 mL · then rhythm check
 Epinephrine {} mL · then rhythm check
 Episode
 Escalate cause-directed support if oxygenation keeps falling
+Escrow
+EscrowEnergy
 Establish the biological link
 Estimated Hct
 EternalFuel
@@ -2072,8 +2153,8 @@ Even severe head trauma leaves a minimum level of consciousness. It can down you
 Every Java runtime must provide SHA-256
 Every Java runtime must provide SHA-{}
 Every ambient disease rolls against frailty, and frailty is just your immunity. Above the break-even point you cannot catch any of them from the environment at all - the check exits before it rolls.
-Every entity that is compatible with DOOMED will despise you.\n\nNothing will care about your little struggles. Your pathetic hope.\n\nTo this Frontier, you are a wet pulse waiting to be silenced.
 Every lethal blow, refused.
+Every live landmine reaches twenty times the ordinary blast radius. Caboose mines keep their harsher wound profile.
 Every nerve is screaming for the drug it is hooked on.
 Every quiet moment is occupied by the need to smoke.
 Every server option was already at its default.
@@ -2112,6 +2193,7 @@ FAHRENHEIT
 FAILED
 FAILED_QUALITY
 FAILING
+FAILURE ARMS THE CURRENT YIELD
 FALL
 FALL SAFETY
 FALLING_OBJECT
@@ -2151,13 +2233,14 @@ FIRMWARE {}.{}-bureau
 FIRST_BEAM
 FIRST_SOLID_CLIP
 FIT PUPPET ART
+FIT SPLINT
 FIVE leads:
 FIXATION
 FIXED_SUCTION_CONE
+FLAGS {}
 FLAMMABLE
 FLATLINE
 FLAWS - these pay
-FLEE
 FLESH
 FLESH_AND_BLOOD
 FLOOR
@@ -2171,10 +2254,12 @@ FOOT
 FOOT_LEFT
 FOOT_RIGHT
 FOREARM
+FOREARM · WRIST SUPPORTED
 FOREARM_LEFT
 FOREARM_RIGHT
 FOREIGN BODY
 FORGE_VETO
+FORMAT_INVALID
 FOUR leads:
 FRACTURED
 FRACTURED 
@@ -2193,12 +2278,15 @@ FULL
 FUME 
 FUNCTION
 FUR
+FUZE
+FUZE LOAD
 Facility Z-9 · site record
 Facility Z-{} · site record
 Fahrenheit (°F)
 Failing kidneys poison the blood before anything is obviously wrong with them. Look for the toxin load, not for a hurt organ.
 Failure-monitor copy. The live physiological cause selects one list below. Edit these freely; lines are fitted into the display and may contain up to 96 characters.
 Failure-monitor copy. The live physiological cause selects one list below. Edit these freely; lines are fitted into the display and may contain up to {} characters.
+FailureLatched
 Far enough from a healthy weight, in EITHER direction, the heart can be seeded into fibrillation. Being too thin is dangerous in its own right, not merely less bad than being heavy.
 Farm cows. im serious. youll need the leather.
 Fat is insulation. A heavier body holds heat better, which is a real edge in the cold and a real problem in the heat.
@@ -2239,10 +2327,12 @@ Firearm content providers need a stable non-null id
 Fires only for a fresh character (never entered), so it triggers once per new world and
 First decide whether to TAP or HOLD, reading down until a rule fits:
 First unbolt the warped cover and pull it from its fixed chassis sockets. Then tear away
+FirstCell
 Fit Puppet Art
 Fit {}
 Fitted {}'s {} with a {} prosthetic at {}% condition.
 Fixed
+Flagged
 FlatlineStarted
 Flesh tears
 Fletching's off - now DRAG the shaft down and out the far side
@@ -2269,7 +2359,6 @@ Forcing '{}' overlay at {}%.
 Foreign fragments are visible or palpable beneath the opening.
 Foreign toxic venom has entered your bloodstream. Antivenom clears it from the system.
 ForgeCaps
-Fracture braced
 Fracture · splinted
 Fracture · unstable
 Fractured {}.
@@ -2309,6 +2398,7 @@ Funkin at Friday
 Fur
 Furry
 Fuse
+Fuses
 GAINING
 GAINING FAST
 GAMEPLAY ASSISTANCE
@@ -2321,6 +2411,7 @@ GIVE UP...
 GLASS
 GLUED
 GLYPH ROUTER
+GO BACK
 GORE & ENCOUNTERS
 GRAB
 GRABBING
@@ -2337,8 +2428,8 @@ GUIDE_FALLBACK
 GUIDE_{}
 GUNSHOT_ENTRY
 GUNSHOT_EXIT
-Gameplay balance: hard ceiling on the FRACTION of a physical or armor-defeating wound covering armor may remove. Default 0.90 always transmits at least 10% of a wound, even with extreme modded armor. Does not affect a projectile the armor fully stops.
-Gameplay balance: hard ceiling on the FRACTION of a physical or armor-defeating wound covering armor may remove. Default {} always transmits at least {}% of a wound, even with extreme modded armor. Does not affect a projectile the armor fully stops.
+Gameplay balance: hard ceiling on the FRACTION of a physical or armor-defeating wound covering armor may remove. Default 0.90 always transmits at least 10% of a wound, even with extreme modded armor. Does not affect a projectile or weak melee hit the armor fully stops before an open wound exists.
+Gameplay balance: hard ceiling on the FRACTION of a physical or armor-defeating wound covering armor may remove. Default {} always transmits at least {}% of a wound, even with extreme modded armor. Does not affect a projectile or weak melee hit the armor fully stops before an open wound exists.
 Gameplay balance: multiplier on how strongly covering armor reduces PHYSICAL body wounds after the struck region is known. 1.0 = authored balance; 0.5 = half-strength; 0 disables wound reduction. This does not change ballistic stopping, retained-object resistance, insulation, or nonphysical hazards.
 Gameplay balance: multiplier on how strongly covering armor reduces PHYSICAL body wounds after the struck region is known. {} = authored balance; {} = half-strength; {} disables wound reduction. This does not change ballistic stopping, retained-object resistance, insulation, or nonphysical hazards.
 Gasping for air ({}%). Everything feels heavy.
@@ -2423,6 +2514,7 @@ HEROIN
 HIDDEN_CATCH_UP_IF_SAFE
 HIGH PRESSURE
 HISTORICAL RECORD
+HIT
 HOLD
 HOLD - the flame is biting
 HOLDING
@@ -2547,7 +2639,6 @@ Hold a sustained flame tagged doomedmatu:cauterizing_flames.
 Hold a usable dressing in your main hand.
 Hold a viable cadaver torso and carry a bone saw to begin harvesting.
 Hold a viable donor organ in either hand.
-Hold a wrench and select the prosthesis to service it.
 Hold a wrench to set someone else's joint.
 Hold a {} in your main hand.
 Hold and feel for the angle the lock turns fully
@@ -2558,16 +2649,14 @@ Hold still. Damage or movement interrupts the examination.
 Hold sutures in your main hand.
 Hold the Field Journal you want to clear.
 Hold the Field Journal you want to modify.
+Hold the limb steady, then release
 Hold the primary button to press the flame in
 Hold the primary button with your hand ON the wound
 Hold the prosthetic you intend to fit in your main hand.
 Hold the socket against the stump until it beds in
 Hold the syringe or IV you intend to use.
 Hold this when despair takes hold - it comforts instead of harm.
-Hold to bind the intact limb - release inside the band
 Hold to grip, lower the needle into the skin, then push down.
-Hold to pull the bone straight - release to set it
-Hold to tighten the strap - release inside the band
 Holding still lets it tamponade. Crouching is deliberate pressure and works better; being unconscious on the floor counts too, which is why dragging a downed friend somewhere quiet is worth doing. Walking, running or fighting stops it outright, and adrenaline suppresses it - a frightened body clots badly.
 HomeX
 HomeY
@@ -2628,6 +2717,7 @@ I CAN'T DO THIS.
 I CAN'T FIX THIS
 I CAN'T GO ON ANYMORE.
 I CAN'T TAKE IT ANYMORE.
+I CHANGED MY MIND
 I Could Do This All Day
 I DON'T REMEMBER MY FACE
 I HAVE THREE SMALL FUSES
@@ -2712,6 +2802,8 @@ ICEBOX_CHILLED
 ICE_PACK
 IDLE
 IDLE / READY
+IGNORE
+IGNORED
 II
 III
 IMMEDIATE THREAT
@@ -2723,6 +2815,7 @@ IMMUNOSUPPRESSANT
 IMPAIRED
 IMPASSABLE
 IMPROVISED
+INACTIVE
 INC-0009
 INC-2210
 INC-7734
@@ -2731,6 +2824,7 @@ INCIDENT - ISOLATE
 INCIDENT {} · {} · {} · HR {} bpm · blood {} L.
 INCIDENTS
 INCOMPATIBLE
+INCOMPATIBLE_CARDS
 INCOMPLETE SCAN
 INCOMPLETE_TELEMETRY
 IND
@@ -2766,8 +2860,7 @@ INT BLEED
 INT Lv {}
 INT {}
 INTACT
-INTAKE
-INTAKE APPRAISAL
+INTEGER
 INTEGRITY
 INTERACTION
 INTERACTIVE
@@ -2783,6 +2876,7 @@ INTERVENTION ADVISED
 INTERVENTION WINDOW CLOSING
 INTESTINES
 INVALID_INPUT
+INVALID_PHASE
 INVENTORY
 IODINE
 IRIS
@@ -2840,7 +2934,6 @@ If you hear a droning noise when you enter a cave, step back to where you were b
 If you see a red beam in the caves, dont cross it. its a gun turret, youll get shot.
 If your blood type is AB+, congratulations, you are biologically a parasite. you can receive a transfusion from anyone but cant give one back. Why do I have a feeling youll be buying from me alot?
 Illness Can Distort Vitals
-Illness Motion
 Illness burns weight off you, and the weight loss then slows the healing and weakens the immunity you need to recover. Eat through a sickness, not after it.
 Im here to buy
 Imagine watching you do that from my perspective lol. Tragic!
@@ -2899,7 +2992,7 @@ Insulation +0.45 dry, falling to -0.28 (below bare skin) past 62 wetness. Dries 
 Insulation +{} dry, falling to -{} (below bare skin) past {} wetness. Dries at {}x. Heat pushes into you {}x harder, and you burn food {}x faster.
 Insulation {}
 Int.bld {}
-Intact limb braced
+Integer
 Integrated server @ %.0f ms ticks, %.0f tx, %.0f rx
 Integrated server @ %.{}f ms ticks, %.{}f tx, %.{}f rx
 Integrity
@@ -2940,6 +3033,7 @@ Invalid effective-bleed rate at index {}: {}
 Invalid journal entry resource location.
 Inventory Gear Button
 Iron
+Iron Deficient
 Iron stores low · red cells rebuild slowly; transfused volume will not fix delivery.
 Irradiated
 Irreversible and fatal. No current treatment removes or reverses the persistent prion disease.
@@ -3007,6 +3101,7 @@ Journal page text is empty or too long
 Just a minor tear...
 Just... let me lie here... just for a second...
 Just... why is it always like this?
+KEEP BINDINGS OFF THE WOUND
 KEEP MONITORING
 KERATINBOOSTER
 KIDNEY_LEFT
@@ -3062,6 +3157,7 @@ LEFT_LUNG
 LEFT_SHOULDER
 LEFT_TMJ
 LEFT_WRIST
+LEGACY
 LET GO NOW
 LET ME SLEEP
 LEUTEN CODED
@@ -3072,6 +3168,7 @@ LIGHT
 LIMB
 LIMB_LOST
 LIMIT
+LIMIT REACHED
 LIMITS
 LINEAR
 LIVE
@@ -3104,8 +3201,8 @@ LOOKING FOR BODY APPEARANCE?
 LOOSE MATERIAL DETECTED. Leave the source, remove contaminated outer gear and decontaminate. Washing cannot undo absorbed dose.
 LOSING
 LOSING FAST
-LOT {}  //  {}
-LOT {} / RELEASE CARD
+LOT {}  ·  {}
+LOT {} / DETAILS
 LOW
 LOW O2
 LOW O2 DELIVERY
@@ -3115,6 +3212,8 @@ LOW O{}
 LOW O{} DELIVERY
 LOW PRESSURE
 LOW RED-CELL RESERVE
+LOWER
+LOWER LEG · ANKLE SUPPORTED
 LOWER POTASSIUM - FLUIDS / DIALYSIS · THEN SHOCK
 LOWER PRESSURE · REASSESS
 LOWER_POTASSIUM
@@ -3131,19 +3230,25 @@ LURK
 LairReservedLotPolicyFingerprint
 LairReservedLotSoldTombstone
 LairResident
+LairRestockObservedAt
 LairStock
 LairStockPolicyFingerprint
+Landmine soundtrack playback was cancelled
 Large areas of tissue are mangled or missing.
 Last drainage
 Last maintenance: {}
+Last warning.\n\nThe body will remember every cut, every dose and every missing part. Survival will be slower, uglier and usually your own fault.\n\nIf that is the run you want, say it plainly.
 LastAction
 LastAttention
+LastEvaluationGameTime
 LastReport
 LastRescue
 LastShot
+LastUpkeepTick
 Latent
 Layered canvas // alignment locked
 Lean
+Leave immobilized; reassess distal perfusion after movement.
 Leave the source. Everything above scales with the dose you are carrying, so distance and time are the treatment, and food and water cover what it takes out of you while it decays.
 Left / Right
 Left Eye
@@ -3172,6 +3277,7 @@ Left-click next; right-click previous
 Legacy config capture already registered with different paths for {}
 Legacy config path segments must be non-blank: {}
 Legacy config paths must contain non-blank segments: {}
+LegacyMigrationVersion
 Legally Dead
 Legally, SAW-01 #27692. but also im legally dead...aaaaaand Ive realized I shouldnt have told you that. anyways issac sounds good I think.
 Legally, SAW-{} #{}. but also im legally dead...aaaaaand Ive realized I shouldnt have told you that. anyways issac sounds good I think.
@@ -3228,7 +3334,7 @@ Locked crate loot for a DOOMED player who lockpicks it - ONE entry dropped at we
 Locked crate loot for a NON-Doomed (vanilla) player who pries one open - ONE entry dropped at random. Mundane valuables only, and never diamonds.
 LockedTarget
 Lockpick
-Look at you, actively choosing your own execution. The monsters won't even have to try.\n\nYour bones will break, your skin will shed, your eyes will be gouged out.\n\nThe machines cannot wait to grind your teeth into dust.
+Loosen or cut the splint binding; recheck distal colour return.
 Lose a limb and keep walking.
 Lose an eye.
 Loss of liver function, from toxic load, sepsis or radiation. The colour eases toward the severity of the failure rather than switching on, so a deepening yellow means the organ is still losing ground.
@@ -3237,6 +3343,8 @@ Low Blood Pressure
 Low Oxygen
 Low pressure alone does not establish a circulating-volume deficit.
 Low pressure is the middle link in almost every fatal chain here: blood loss lowers pressure, pressure caps consciousness, and circulatory collapse drains the brain. Most deaths in this mod are that sequence.
+Low-consciousness response, tremor, ataxia and rigors; mechanics stay server-owned.
+Low-consciousness response, tremors, ataxia and rigors.
 Lower potassium and support renal clearance
 Lower potassium before treating the rhythm
 Lower this for protected building servers; 0 makes terrain effectively impassable.
@@ -3251,6 +3359,7 @@ MAINTENANCE OVERRIDE
 MAJOR
 MAJOR_GRAFT
 MAKE IT QUIET
+MALFORMED
 MANAGE_PULMONARY_EMBOLISM
 MANUAL
 MANUAL TMJ REDUCTION
@@ -3264,6 +3373,7 @@ MARROW_WORM
 MASSIVE HEMORRHAGE
 MASTER switch. false = NOTHING Doomed generates in newly generated chunks - no grabber plants, traps, mines, drop capsules, trader lairs, cyst jungle, cave flora, ferns or herbs. For running Doomed alongside other worldgen-heavy mods without its features. Chunks that already generated are unaffected. Leave true and use the per-feature toggles below for finer control.
 MATU
+MATU'S SIN
 MATURE
 MAW_HOLLOW
 MC
@@ -3282,6 +3392,7 @@ METAL
 MID
 MIMIC_CRY
 MIMIC_WHISPER
+MINERAL_PARTICULATE
 MINIMAL_EFFECTS
 MINING
 MINOR
@@ -3319,6 +3430,7 @@ MOVE / JUMP / ATTACK - PULL AWAY
 MOVED
 MSA
 MULTI-SYSTEM FAILURE
+MULTIPLY
 MUSCLE
 MY HAND HURTS. MY FINGERS HURT. I DON'T HAVE A FUCKING HAND. WHERE IS THE PAIN COMING FROM!? HOW DO I MAKE SOMETHING THAT ISN'T THERE STOP HURTING!?
 Machine overview
@@ -3381,6 +3493,7 @@ MicrobialLoad
 Micronutrients (iron and six dormant stores). Iron is spent by bleeding and by living, and it gates how fast you rebuild red blood cells - so a transfusion can restore your blood VOLUME and leave your oxygen delivery low. Turn off to make blood loss purely a volume problem.
 Migrated legacy white forced chat colour in '{}' to the current warm-ivory default.
 MinNodeY
+Mine
 Minecraft 1.20.1 (1.20.1/forge)
 Minecraft {}.{} ({}.{}/forge)
 Minecraft's ten-shank row, filled from Doomed's real hunger. Presentation only.
@@ -3400,6 +3513,7 @@ Mix
 Mixed fluid can have more than one cause and may need more than one treatment.
 Mixed fluid is compressing your lungs. WITNESS must identify the sources before invasive drainage.
 Modified
+Modifiers
 Monitor gait, swallowing and airway protection
 Monitor the small amount of blood around the lung
 Mood
@@ -3425,7 +3539,6 @@ Mossified
 Most credit you can bank with a single trader at once. 60 (default).
 Most credit you can bank with a single trader at once. {} (default).
 Most general-purpose Forge tanks treat quality records as part of fluid identity. They can accept the first graded batch and reject a later batch of the same named fluid when its record differs. This is a storage limitation, not a blocked pipe or a second kind of opium.
-Motion caused by tremors, ataxia and rigors.
 Mouth
 Mouth is like ash.
 Moving the arm through its range
@@ -3517,6 +3630,7 @@ NO FEED SOLUTION
 NO FURTHER MARGIN
 NO HANDSHAKE
 NO IMMEDIATE THREAT
+NO INPUT UNTIL THE MUSIC STARTS
 NO LIMIT
 NO LOOSE ACTIVITY INDICATED
 NO OBSERVATION
@@ -3525,7 +3639,7 @@ NO PHYSIOLOGICAL RESERVE REMAINS
 NO POWER
 NO PULSE OX TRACE - PERIPHERAL PERFUSION FAILING
 NO SAFE SINGLE-DRUG PATH · SUPPORT OXYGENATION
-NO STOCK RECORD
+NO STOCK
 NO SUBJECT LINK
 NO SUPPLY FLUID
 NO TALENT SELECTED
@@ -3550,6 +3664,7 @@ NOT COPING
 NOT DETECTED
 NOT LOOKING AFTER YOURSELF
 NOT REQUIRED
+NOT THIS RUN
 NOT YET ASSESSED
 NOT YET EXAMINED
 NOT YET MEASURED
@@ -3559,6 +3674,7 @@ NOTHING LEFT IN RESERVE
 NOT_APPLICABLE
 NOT_AUTHORIZED
 NOT_A_TORSO
+NOT_FOUND
 NOT_MISSING
 NOW
 NOW {}
@@ -3566,6 +3682,7 @@ NO_BREACH_WORKER
 NO_CONVERT
 NO_MATCH
 NO_PROSTHETIC
+NO_SAFE_ANCHOR
 NO_SESSION
 NO_SUBJECT_LINK
 NSA
@@ -3611,6 +3728,7 @@ No Bureau model. I'll count the damage myself.
 No Doomed data attached.
 No active biological mirror is available.
 No active clinical case.
+No active modifiers. 
 No biology the Bureau recognises - they are not a subject.
 No cartridge installed
 No circulation · blood only {} L - a shock won't hold without volume.
@@ -3629,7 +3747,6 @@ No emergency device fits this slot
 No external wounds.
 No field items have been catalogued yet. Physically possess a Doomed item to index it.
 No fluid circuit fitted.
-No fracture was present
 No immediate threat detected in the current scan.
 No immediate threat.
 No journal definitions are loaded.
@@ -3710,6 +3827,7 @@ O2 delivery
 OBLIQUE VIEW
 OBSERVATION
 OBSERVATION RECORD
+OBSERVE COLOUR RETURN
 OBSERVED INCIDENTS
 OBSERVED MOODLE // CHARACTER RECORD
 OBSERVED NOW
@@ -3724,7 +3842,7 @@ OCCUPANT TELEMETRY // UNSTABLE
 OCULAR
 OFF
 OFF CADENCE
-OFFER
+OFFERED
 OH GOD-PLEASE-NO-!
 OK
 ON
@@ -3747,6 +3865,7 @@ OPEN TREATMENT PANEL //
 OPEN {}
 OPENED
 OPEN_CORRIDOR
+OPEN_FIRE
 OPERATION
 OPERATIVE_SITE_LOST
 OPERATOR READINESS
@@ -3757,11 +3876,13 @@ OPIOID RESPIRATORY DEPRESSION
 OPIOID_TOXICITY
 OPIUM
 ORDINARY
+ORDINARY SPLINT · {}
 ORGAN
 ORGAN FN [{}]
 ORGAN FUNCTION BELOW SUSTAINABLE LIMIT
 ORGANIC BIOAEROSOLS
 ORIGIN
+ORPHANED
 OSSUARY
 OTHER
 OTHER_ORGAN_FAILURE
@@ -3781,10 +3902,14 @@ OVERRIDE DECAY
 OVERSIZED
 OVERWORLD_ONLY
 OVERWORLD_ONLY = only minecraft:overworld (default).
+OWNER_HAS_OPEN_INCIDENT
+OWNER_MISMATCH
+OWNER_OFFLINE
 OWN_BODY
 OXYLINE
 O_NEGATIVE
 O_POSITIVE
+Observe colour return before fitting · loosen a binding if circulation is reduced
 Observed quality {}%
 Observed quality: {}%
 Observer row:  = same   - private   or type public observer text
@@ -3810,6 +3935,7 @@ One or more vital systems are below survivable limits.
 One shared count across every trader.
 One wrong cut detonates the mine
 One-Click Treatment
+One-click medical treatment is disabled by this server.
 One-sided
 Only a Doomed body can stand its last stand.
 Only a player can become Doomed.
@@ -3838,6 +3964,7 @@ Open the health panel and apply the blood bag to a limb.
 Open the health panel and apply the saline to a limb.
 Open the trunk - straight, one pass
 Open this machine's recipe catalogue
+Open wound visible · haemorrhage should be controlled first
 OpenGL error: GL_OUT_OF_MEMORY (1285)
 OpenGL error: GL_OUT_OF_MEMORY ({})
 Opened CPR on {}.
@@ -3845,6 +3972,8 @@ Opened held journal with {} resolved approved record(s).
 Opened {} for {}. Ordinary server validation remains active.
 Opening WITNESS consumes one rechargeable battery unit. Scanning another patient requires them to be nearby and in sight; the scan cannot treat them.
 Opening the jaw and turning the head
+Operator
+Operator control. {}
 Opioid Overdose
 Opioid activity is suppressing ventilation{}
 Opioid dependence is building - the same dose gives less relief and withdrawal will bite sooner.
@@ -3858,6 +3987,7 @@ Opioids solve every problem for exactly as long as you refuse to count the new p
 Optional convenience that preserves server costs.
 Optional sounds for physical chat input.
 Optional survival-mod bridges. AUTO selects a single meter/environment owner when the
+Optional world rules alter a run without becoming ordinary customization settings.
 Order: clamp the source → restore volume and pressure. If oxygen is critical, support breathing while you work. The pinned action is step one.
 Ordinary exposure does not stop your heart - it necroses your extremities. Frostbite is the actual lethal path for cold, and it takes fingers and feet first.
 Ordinary goods: {} / {}
@@ -3877,6 +4007,7 @@ Output
 OutputTank
 Overclocked
 Overclocked - launches harder, runs hot, drains fast
+Overdue
 Overhead Messages
 Overheated
 Overheating
@@ -3884,6 +4015,7 @@ Overhydrated
 Overload slows your attack speed directly, and it raises how hard you land from a fall. It is a combat and mobility penalty, not just a walking one.
 Overrides apathy hiding hunger and thirst readouts; the underlying needs never pause.
 Overweight
+Owner
 Oxygen delivery
 Oxygen is present, but delivery is impaired · check red cells and perfusion.
 Oxygen saturation is low; no synchronized driver has been confirmed.
@@ -3894,6 +4026,7 @@ Oxyline {} mL · bridge only
 Oxyline {} mL · temporary support
 O{} del
 O{} delivery
+PADDED SPLINT
 PAIN
 PAIN STARBURST
 PAIN WAKES YOU
@@ -3906,16 +4039,26 @@ PASSIVE
 PASSIVE CASSETTE
 PATHOLOGY
 PATIENT
+PATIENT_MISMATCH
+PATIENT_MISSING
+PATIENT_TERMINAL
 PATIENT_UNAVAILABLE
+PAUSED
+PAYLOAD_INVALID
 PE
 PE + hemorrhage · no safe single-drug path
 PE CARE · OXYLINE BRIDGE
 PENDING
+PENETRATED
 PERCEPTION
+PERFUSION
 PERFUSION HYPOXIA
 PERFUSION PRESSURE COLLAPSING
+PERFUSION_REDUCED
+PERISHABLE
 PERKS - these cost
 PERMANENT WITHIN A LIFE
+PERSISTED_CAP_REACHED
 PERSISTENT
 PERSONALIZATION
 PHARMACOLOGY
@@ -3963,6 +4106,7 @@ PRESSURE FUSE
 PRESSURE IS A SOCIAL CONSTRUCT
 PREVENTION IS THE ONLY TREATMENT
 PREVIEW
+PRICE  {} CR
 PRIMARY CONSTRAINT
 PRIMARY ROOT
 PRION
@@ -4042,16 +4186,19 @@ PendingAffection
 Per-face input and output routing
 Per-portion Kuru seed risk for legacy or datapack human flesh with no recorded donor/tissue
 Perks cost points. Flaws pay for them. You cannot start owing.
+PersistenceSchema
 Personnel
 Phantom episode
+Phase
+PhaseStartedAtActiveTick
 Phenomena
 Physical Grabber chain must contain 2-24 nodes
 Physical Grabber chain must contain {}-{} nodes
 PhysicalBody
 PhysicalInterval
 Pitch Variation
+Place an item in the slot to sell it.
 Place both pads on the marked corners
-Place goods in the intake slot.
 Place the AED pads on the chest (thorax)
 Place the defibrillator on the chest (thorax)
 Play CUE-type body vocalizations - the useful ones: a yawn when you're tired (go sleep) and heavy panting/choking when your stamina or oxygen is low. Kept separate so you can mute pain but keep these.
@@ -4070,6 +4217,7 @@ Point into the right half of the lock ring and hold to turn it
 Poor Circulation
 Poor protection from chemical vapour
 Ports
+Position
 Positions
 Post-Cascade zone
 Potassium has climbed past what your heart can tolerate and the rhythm is breaking down. Drink - water is the only thing that eases the load - and stop whatever is poisoning them.
@@ -4087,6 +4235,7 @@ Preset #%06X
 Preset #%{}X
 Preset name
 Presets
+Press and hold the distal pad until pale, then release
 Press on it-why won't it stop-please STOP!
 Press on the glowing knot to catch the needle
 Press those four in that column's order, left to right.
@@ -4139,6 +4288,8 @@ Public chat-text colour (packed 0xRRGGBB) used when allowChatPresentation is fal
 Public chat-text colour (packed {}xRRGGBB) used when allowChatPresentation is false.
 Public choices are validated by the current server.
 Pull it straight back out (drag up)
+PullFluidEscrow
+PullItemEscrow
 Pulmonary Embolism
 Pulmonary clot is obstructing perfusion{}
 Pulmonary embolism
@@ -4200,6 +4351,7 @@ RECOVERED //
 RECOVERING
 RECRYSTALLIZER
 REDUCED
+REDUCED - loosen + recheck
 REDUCED_MOTION
 REDUCED_UNSTABLE
 REDUCE_DISLOCATION
@@ -4208,13 +4360,15 @@ REFUSED
 REGION ACTION
 REGION CHART
 REGISTERED PROPERTIES
+REGISTRY_DIGEST_MISMATCH
+REJECT
 REJECTED
 REJECT_LOCAL_EDGE
 RELATED
 RELAY QUIET
-RELEASED
 RELIEFCREAM
 REMOVE_SHRAPNEL
+REMOVE_SPLINT
 REMOVE_TOURNIQUET
 REMOVE_TOURNIQUET_AFTER_BLEED_CONTROL
 RENAL FAILURE
@@ -4235,6 +4389,8 @@ RESET {}
 RESIDENT INTELLIGENCE · UNBOUND
 RESIDUAL INFECTIOUS THORACIC BURDEN
 RESIDUAL-LIMB PHYSIOLOGY
+RESOLVED
+RESOLVED_SETTINGS_MISMATCH
 RESP
 RESPIR
 RESPIRATION
@@ -4259,6 +4415,8 @@ RETREAT
 RETRO
 RETURN TO BODY // 
 REVEAL
+REVIEW
+REVISION_MISMATCH
 RHYTHM CONTROL · OXYLINE BRIDGE
 RHYTHM INSTABILITY
 RHYTHM RESTORED
@@ -4279,6 +4437,7 @@ RIGHT_WRIST
 RINGERSOLUTION
 RINSE
 RISING
+RMB / ESC cancels without consuming the splint
 RMB / ESC to cancel
 RMB / ESC to power off
 RMB / ESC to stop
@@ -4300,8 +4459,8 @@ RR + SpO2 + conscious
 RR + SpO{} + conscious
 RR {}/min
 RUN
-RUN AWAY
 RUN MANAGEMENT
+RUN MODIFIERS
 RUNAWAY
 RUNNING
 RUNTIME_HULL_MISMATCH_{}
@@ -4365,6 +4524,8 @@ ReceiverPulses
 ReceiverSide
 ReceiverStrength
 Receiving tank contains another grade.
+RecentChemOperator
+RecentChemOperatorTick
 Rechargeable WITNESS peripheral. A scan costs five battery units and immediately reports the current connected airspace with narrow instrument uncertainty. It cannot sample through solid cover and needs a WITNESS tablet to display.
 Recheck bleeding and the limb below the tourniquet
 Recheck blood pressure, temperature and sepsis
@@ -4377,14 +4538,13 @@ Recipe
 RecipeIndex
 Recognition threshold: INT {}.
 Record does not survive. The trial predates the first viable bind and was closed before designation. Material disposition unrecorded.\n
+RecordSchema
 Recorded after this character first carried the specimen.
 Recorded after this character first experienced the condition.
 Recorded {}'s {} as an abscence.
 Recovery priority\nfragment\nEvacuation\nconditional\nCivilian presence\n0\nSpiral Insurgency\ncredited · prevented evacuation\nFCB\ncited · procedural drift\nDR-01\nsensor anomaly, prior-consistent\nRecovered transmission, attributed\nSpiral\n:\n"If they leave alive, they get numbered. If they die here, they stay human."\nAppendix line, recovered:\nNonviable subjects retained for analysis.\n
 Recovery priority\nfragment\nEvacuation\nconditional\nCivilian presence\n{}\nSpiral Insurgency\ncredited · prevented evacuation\nFCB\ncited · procedural drift\nDR-{}\nsensor anomaly, prior-consistent\nRecovered transmission, attributed\nSpiral\n:\n"If they leave alive, they get numbered. If they die here, they stay human."\nAppendix line, recovered:\nNonviable subjects retained for analysis.\n
 Recycle Bin
-Red cells rebuild at 0.45x. A transfusion restores litres and leaves you short of breath for far longer.
-Red cells rebuild at {}x. A transfusion restores litres and leaves you short of breath for far longer.
 Red-cell reserve
 Reduce decorative WITNESS motion (blinking caret, animated IRIS trace and pulse glow). All readings, warnings and severity colours remain visible.
 Reduce dislocation - {}
@@ -4400,6 +4560,7 @@ Refusing to load this world because Doomed: Guns is absent or incomplete and loa
 Region
 Registered cyst biome {} is missing; leaving host biome palette intact
 Registered roles: {}.
+RegistryDigest
 Rejected chemistry datapack {}: {}
 Rejected chemistry recipe #{} in {}: {}
 Rejected damage-profile datapack {}: {}
@@ -4411,8 +4572,8 @@ Rejected firearm manifest {}. Its item will use the legacy renderer: {}
 Rejected firearm presentation {}. This item will use its legacy renderer: {}
 Rejected nutrient-source datapack {}: {}
 Release or ESC to think better of it - costs nothing
-Released from this case.
 Reload firearm
+Remaining condition: {}%
 Remember that saline restores volume but not red cells
 Remove only after another method controls the source
 Remove shielding to expose the live controls
@@ -4432,6 +4593,7 @@ Reputation
 Requires INT {}{}
 Rescan the patient
 Rescues
+Reseat the unstable splint, then reassess distal perfusion.
 Reserve
 ReservedLot
 Reset All
@@ -4486,6 +4648,8 @@ Retro Tick
 Return to patient's inventory
 Reusable fluid capacity: 100 mL. Blood pathogens and equipment contamination remain attached to this exact syringe stack; an empty barrel is not automatically sterile.
 Reusable fluid capacity: {} mL. Blood pathogens and equipment contamination remain attached to this exact syringe stack; an empty barrel is not automatically sterile.
+Revealed
+Revision
 Revivol changes the transient causes of a faint. It does not restore blood, oxygen, blood pressure or damaged organs. If one of those still limits consciousness, the patient will fall again as the jolt fades.
 Revolver debris
 RevolverCockDue
@@ -4494,6 +4658,7 @@ RevolverIndex
 RevolverLoadedMask
 RevolverSpentMask
 RevolverTypes
+RewardLatched
 Rhythm
 Ribs showing - your body is eating itself. Eat, and keep eating.
 Right Art Faces Inward
@@ -4545,9 +4710,13 @@ RouteWrapped
 Rules
 Run
 Run Management is never remembered as your default settings page.
+Run Modifiers
 Running
+Runtime server-config mutation attempted before the spec loaded.
+Runtime server-config mutations must run on the server thread.
 S-Shivering...
 S-someone... wrap me up... please...
+SAFE
 SALINE
 SAME
 SAMPLING METHOD
@@ -4557,6 +4726,8 @@ SAW
 SAW // MEDICAL SURPLUS
 SAW-01 #27692  /  FIELD CLINICAL EXCHANGE
 SAW-{} #{}  /  FIELD CLINICAL EXCHANGE
+SCHEMA_DRIFT
+SCHEMA_UNSUPPORTED
 SCHIZOPHRENIA
 SCORCHED HULL
 SCORCHED HULL: cut one lead FURTHER DOWN than the answer (past the last, wrap to top).
@@ -4571,6 +4742,7 @@ SEARCHING
 SEARCH_APERTURE
 SEARCH_EXHAUSTED
 SECTIONS
+SECURE
 SEDATIVE
 SEDENTARY
 SEEN
@@ -4581,7 +4753,9 @@ SELF
 SELF-EXAMINATION
 SELF_GORE
 SELF_HARM
-SELL LIMIT
+SELL
+SELL  +{}
+SELL ITEM
 SELLING
 SELLING LIMIT
 SEMI
@@ -4591,6 +4765,7 @@ SEPSIS %.{}f%% // BP %.{}f/%.{}f
 SEPSIS DEVELOPING
 SEPTIC
 SEPTIC SHOCK
+SEQUENCE LOCKED
 SER
 SERIOUS
 SERVER
@@ -4606,8 +4781,13 @@ SERVER LOCKED: puppet fitting is disabled.
 SERVER LOCKED: transformation model visibility is forced.
 SERVER LOCKED: vanilla hearts are explicitly hidden.
 SERVER RULES
+SERVER_CAP_REACHED
 SERVICE
 SERVICE BUS // MANUAL ACCESS
+SET
+SETTING_OPERATION_INVALID
+SETTING_RESULT_INVALID
+SETTING_TYPE_MISMATCH
 SEVERANCE
 SEVERE DEHYDRATION
 SEVERE FIBRILLATION
@@ -4648,6 +4828,8 @@ SKILLS
 SKIN
 SKULL
 SLAKING_VAT
+SLIPPING
+SLIPPING · RESEAT BINDING
 SMELL
 SMELL WOUND
 SMOOTH
@@ -4656,11 +4838,14 @@ SOAP
 SODIUM
 SODIUMNITROPRUSSIDE
 SOFT
+SOLD
+SOLD OUT
 SOLDAT
 SOLVED
 SOMEBODY-!
 SOMETHING IS WRITING OVER ME
 SOMETHING MOVED INSIDE MY CHEST. I CAN'T BREATHE. I CAN'T GET ENOUGH IN. IT STOPS HALFWAY.\n\nI put the drain in and warm fluid came through the tube. I could breathe again. Not properly, but again.
+SOUL_CAMPFIRE
 SOURCE
 SOURCE UNRESOLVED
 SOUTH
@@ -4668,6 +4853,7 @@ SOUTH_DOWN
 SOUTH_UP
 SPACE or click the sternum · 100-120 compressions/min
 SPACE or click the sternum · {}-{} compressions/min
+SPAWN_FAILED
 SPECIMEN DATA
 SPECIMEN TERMINATED
 SPINAL
@@ -4686,6 +4872,7 @@ SQUEEZE_DESCENT
 STABILIZE PERFUSION
 STABLE
 STABLE - no wounds
+STABLE · PERFUSION PRESERVED
 STAGE_1
 STAGE_2
 STAGE_3
@@ -4708,8 +4895,8 @@ START_OUT_OF_WORLD
 START_UNLOADED
 STATE
 STATE {}
-STATUS  RELEASED
 STATUS UNAVAILABLE
+STATUS_NOT_ACTIVATABLE
 STEADY
 STEP
 STERILE
@@ -4779,13 +4966,13 @@ SYSTEMS STABLE
 Sad
 Safe wire = one slow, even pulse. Wrong wires flutter out of rhythm.
 SafeAnchors
+Sale value: {} credit
 Saline buys circulation, not oxygen. If the blood is gone, you still need blood.
 Saline raises volume without adding red cells. It will hold your pressure up, which buys real time, but it cannot carry oxygen - a saline-filled body can have a decent pressure and still be starving.
 SalineAt
 SalinePressure
 SalineRedCells
 SalineVolume
-Salivating over your own destruction.\n\nDribbling with pathetic, unearned confidence.\n\nNo demon forced your hand. No god set this trap.\n\nYou crawled into the furnace all by yourself, laid down, and pulled the lid shut.\n\nNo matter how fast you run, or how hard you fight, tomorrow's sorrow is already waiting for you.
 Salvaged what was left of it
 Sampler cache capacity must be positive
 Sampler failed to author the Maw capsule at {},{},{}
@@ -4811,6 +4998,9 @@ Scales every person-to-person transmission roll. {} = default. Lower it for a se
 Scales impacts and pulses without disabling their visual progression.
 Scary fact. If you go to the nearest village and scream "I HAVE A BOMB" while violently shaking the nearest villager at 3 am, a scary creature called an "Iron golem" will beat the crap out of you
 Scary fact. If you go to the nearest village and scream "I HAVE A BOMB" while violently shaking the nearest villager at {} am, a scary creature called an "Iron golem" will beat the crap out of you
+ScenarioSeed
+ScenarioType
+ScenarioVersion
 Schema
 Schizophrenia
 Screen Shake
@@ -4841,6 +5031,7 @@ Select an eligible arm or leg region on WITNESS, or treat an active limb bleed.
 Select empty-handed to loosen the tourniquet.
 Select the missing arm or leg segment on WITNESS first.
 Select the wound you intend to examine first.
+Select this prosthesis to expose its equipment actions.
 Select to extract the lodged arrow; tweezers improve control.
 Select to reduce by hand, or hold a wrench for mechanical assistance.
 Select to remove shrapnel; numb severe local pain first.
@@ -4877,7 +5068,6 @@ Set {} infection to {}%.
 Set {} internal bleed to {} L/min.
 Set {} to remove the throttle entirely. The window is in memory only and resets on a server
 Set {} to {}.
-Set {}%
 Settings
 SettleRetryTicks
 SettleTicks
@@ -4941,6 +5131,7 @@ Since last change
 Sit down before you fall down.
 Site record sealed. The facility was preserved, the breach was repaired, and reconstruction was contracted to the same syndicates that fund the program. Clearance insufficient.\n
 Sites
+Size
 Skin
 Skin over bone. Your body is devouring itself to stay alive.
 Skip Ritual Intro
@@ -4981,6 +5172,7 @@ Soft Pulse
 Soft Select
 Soil, grime or another contaminant is still present in the wound.
 Sold
+Someone else is already working on this fuze.
 Someone is already asking them.
 Something
 Something behind the steel is already drawing current.
@@ -5025,9 +5217,10 @@ Spinal tissue
 Spiral Insurgency
 Spleen
 Splint
-Splint - {}
+Splint fitted
 Splint the affected region. A stabilized fracture knits in minutes; an unsplinted fracture can remain disabling for most of an hour.
 Splint the break before you walk on it. Every stubborn step makes the body remember.
+Splint · {}
 Split perspective disabled; dialogue is shared exactly as before.
 Split perspective enabled for this profile.
 Split: {}
@@ -5045,6 +5238,7 @@ Stabilize the shaft. Field removal risks vital structures.
 Stabilize the shaft; apply a tourniquet before any intervention.
 Stabilize the shaft; dress around it and hold pressure before intervention.
 Stabilize with a splint.
+StableTicks
 Staging and classification sealed under Bureau directive.
 Stagnation
 Stale
@@ -5060,6 +5254,7 @@ Start at Intelligence +4. INT gates the hardest surgery in the game and is slow 
 Start at Intelligence +{}. INT gates the hardest surgery in the game and is slow to train.
 Start at Resilience +4, which is stamina regen you would otherwise have to earn.
 Start at Resilience +{}, which is stamina regen you would otherwise have to earn.
+StartedMillis
 StartingQuality
 Starving
 State
@@ -5203,6 +5398,7 @@ THERMAL STRESS
 THERMOREGULATION LOST
 THIAMINE
 THIGH
+THIGH · HIP TO KNEE
 THIGH_LEFT
 THIGH_RIGHT
 THIRST
@@ -5342,6 +5538,7 @@ The AED pads belong on the chest.
 The Bureau module ran out of words. I can still count the damage.
 The Bureau would like to thank you for validating our ridiculously low expectations!
 The Echo Relay and Glyph Router expose their controls on the panel. Their routing tables
+The Frontier will not slow down for you.\n\nCarry gauze. Count your doses. Check your blood pressure. Learn the kit before you need it.\n\nThere is no spare body.
 The Godloop has closed us off from everything we used to be.
 The Liquidator Liquidated
 The Maid
@@ -5439,6 +5636,7 @@ The fever has gone systemic and is turning septic. Antibiotics NOW, and get warm
 The frame carries EDGEWORK the rules below read:
 The frost is stealing the movement from your muscles.
 The frost is stealing the movement from your muscles. Warm up - a fire, heater, hot drink, or insulation.
+The fuze panel lost its connection.
 The graft is in. Now keep it.
 The guards said im not allowed to sell fentanyl in town but they didnt say anything about selling it out of town
 The gut is in open revolt - eating now only feeds it.
@@ -5669,6 +5867,7 @@ The {} already has an equal or better prosthetic.
 The {} cannot be immobilised with this splint.
 The {} has no bruise to treat.
 The {} has no fracture to weld.
+The {} has no splint.
 The {} has no tourniquet.
 The {} has no wound to bandage.
 The {} has no wound to staple.
@@ -5765,7 +5964,7 @@ This body: {}.
 This cannot be undone. Two confirmations remain.
 This colour is locked by the server.
 This is a BETA build.
-This is not a conventional class.\n\nThis is the moment you stop playing a game and start volunteering for an autopsy. You are giving the world explicit permission to tear you open and see what you look like on the inside.
+This is not a class.\n\nIt replaces the health bar with a body. Bones break. Blood leaves. Medicine matters.\n\nIf you continue, the condition lasts for this run.
 This is the ARC, not the ART - body sprites are a separate per-player cosmetic choice in
 This is the airway or the lungs failing right now, not a slow condition. Everything downstream - consciousness, the brain - is on a short clock behind it.
 This is the biggest social mechanic in the mod - it is the only one where
@@ -5773,6 +5972,7 @@ This is the bit where you decide.
 This is your story - however, you may change your body's appearance any time.
 This item requires two usable arms; {}
 This kills the current body. Continue only if that is deliberate.
+This lot is sold.
 This rule type is not safe to edit in game.
 This segment is prosthetic. Service it with a wrench.
 This segment is prosthetic; there is no biological tissue to treat.
@@ -5801,6 +6001,8 @@ Tie the vessels off - press and HOLD each stump
 Tighten the bolts opposite each other, never round the ring
 Time played this life: %dh %02dm %02ds%s
 Time played this life: %dh %{}dm %{}ds%s
+TimerLastObservedGameTime
+TimerMaximumTicks
 Tired
 Tiring
 Tissue has been torn away in an uneven flap
@@ -5844,7 +6046,6 @@ Toxicity Threshold
 Toxin levels are high; the failing organ is unknown.
 Toxin load
 Tracking a nearby point
-Traction   -   Set {}%   -   RMB / ESC to stop
 TradeCreditAccounts
 Trader intake is full{}
 Trader refuses this material.
@@ -5899,6 +6100,7 @@ UNAVAILABLE
 UNAVAILABLE: body-health mirroring is disabled on this server.
 UNAVAILABLE: dialogue profiles belong to an in-world character.
 UNAVAILABLE: open this setting while inside a world.
+UNCHANGED
 UNCLASSIFIED
 UNCLASSIFIED - SEE TRANSFORM
 UNCLASSIFIED EVENT
@@ -5912,8 +6114,10 @@ UNI-HEALTH™
 UNI-HEALTH™ FDU - EULA
 UNI-HEALTH™: unauthorized modification detected ☺
 UNKNOWN
+UNKNOWN_CARD
 UNKNOWN_LEGACY
 UNKNOWN_RESULT
+UNKNOWN_SETTING
 UNLOAD
 UNLOADED
 UNLOADED_BOUNDARY
@@ -5923,6 +6127,7 @@ UNSTABLE
 UNSUPPORTED
 UNTYPED
 UP
+UPPER ARM · SHOULDER TO ELBOW
 UPPER_ARM_LEFT
 UPPER_ARM_RIGHT
 UPTAKE SUSPECTED
@@ -5958,9 +6163,9 @@ Unknown synced chemistry fluid
 Unknown synced chemistry item
 Unknown thoracic fluid is not confirmed hemothorax.
 Unknown trait id: {}
-Unnecessary immobilisation   -   RMB / ESC to stop
 Unrefrigerated blood-bag shelf life in hours at paceFactor 1. The Icebox and powered Freezer slow this clock but never stop it; the server owns all ageing and expiry.
 Unrefrigerated blood-bag shelf life in hours at paceFactor {}. The Icebox and powered Freezer slow this clock but never stop it; the server owns all ageing and expiry.
+Unregistered stateful block item: {}
 Unresolved oxygenation failure · SpO2 {}.
 Unspecified tissue
 Unsupported Create backtank API
@@ -6027,6 +6232,7 @@ Venom {}%
 Vent
 Ventilated
 Verify whether the residual infectious burden is still active
+Version
 Versioned capture must include its completion path and at least one evidence path
 Versioned legacy capture already registered differently for {}
 Vertical adjustment for the Doomed Gear shortcut, in GUI pixels (-240 to 240).
@@ -6059,7 +6265,6 @@ Vitamin B{}
 Vitamin C
 Vitamin D
 Volume back in - a bag or saline. A tourniquet does nothing here; there's nothing to clamp.
-Volume comes back. The cells that carry oxygen do not.
 Volume of the ambient DRONE layers - the low unease bed, the mood drone, the physical-distress drone and the dread windup. 0.0 silences them entirely, 1.0 is as shipped. This deliberately does NOT affect state cues like the flatline tone, the critical-condition loop or the health-panel alarm, so turning it down can never hide the audio telling you that you are dying.
 Volume of the ambient DRONE layers - the low unease bed, the mood drone, the physical-distress drone and the dread windup. {} silences them entirely, {} is as shipped. This deliberately does NOT affect state cues like the flatline tone, the critical-condition loop or the health-panel alarm, so turning it down can never hide the audio telling you that you are dying.
 Volume of unease, mood, distress and dread beds only.
@@ -6136,6 +6341,7 @@ WITNESS diagnostic tablet
 WITNESS supplies the measurement. Return to the selected body region to act on it.
 WITNESS · FDU-09
 WITNESS · FDU-{}
+WON
 WOOD
 WORLD
 WOUND
@@ -6188,7 +6394,8 @@ Whatever went in was not clean.
 When ANY player says doom/doomed in chat, flash an Invincible-style DOOMED title card + fanfare on every Doomed player's screen. A gag - on by default.
 When both Create and Thin Air are installed, a worn Create diving helmet plus a
 When moodles are right-anchored, use an optional <name>_right.png from resource packs. If it is absent, mirror the normal art so decorative extensions point inward. Disable to draw the same orientation on both sides.
-When true, WOUNDS survive death: torn skin, wasted muscle, fractures and their splints carry to the new body. Lethal state never carries - blood, brain, bleeding, infection and organs always reset, so a respawn is never a death loop. Off by default: Doomed's death already costs everything. Turn it on if you want the body you earned to follow you through the respawn.
+When true (default), neurological fumbles can eject the selected stack, offhand stack and next hotbar stack into the world. Set false when a corpse/keep-inventory mod is meant to prevent environmental item loss. Other brain-damage consequences remain active: confused speech, reversed controls, flashes and collapse.
+When true, WOUNDS survive death: torn skin, wasted muscle, fractures and their splints carry to the new body. Lethal state never carries - blood, brain, bleeding, infection (including Kuru/prion progression) and organs always reset, so a respawn is never a death loop. Off by default: Doomed's death already costs everything. Turn it on if you want the body you earned to follow you through the respawn.
 When true, a head-first landing is lethal outright - the brain is destroyed rather than concussed. Death in this mod is brain death, so this routes through the normal death path, not an instant-kill. Off by default.
 Where Doomed gear actually comes from.
 Where are my hands? I can't-I can't feel them...
@@ -6219,6 +6426,7 @@ Wiped Doomed data for one player.
 Wiped Doomed data for {} players.
 Withdrawal
 Woah! It's a reference to... You!!
+World-wide authored rules. Operator changes are saved by this world and synchronized to everyone.
 Worn Claws
 Worn gear
 Worn: {}
@@ -6235,6 +6443,7 @@ Wounds clot at 0.55x. Everything bleeds nearly twice as long, and a bad one outr
 Wounds clot at {}x. Everything bleeds nearly twice as long, and a bad one outruns a bandage.
 Wrapped {}%   ·   Dressing {}%   ·   RMB / ESC to stop
 Wraps
+Wrench-select to service it. Detach below to drop it.
 Wrong blood
 Wrong type ({} into {}) - and this body barely reads as human any more.
 Wrong type: {} into {}. The body is destroying it.
@@ -6347,7 +6556,9 @@ You could use a drink.
 You crack the heat pack - warmth floods back into your core and the numbness recedes.
 You crank the strap tight on {}. The ischaemia clock is theirs now - watch it.
 You crossed a boundary that does not grow back.
+You cut the bindings from {} and recover the worn rails.
 You cut the improvised binding off {} - nothing worth keeping.
+You cut the ruined splint from {}; nothing is reusable.
 You didn't wrap the {}.
 You died exactly as you lived: completely confused and disappointing everyone!
 You disinfect {}; it stings.
@@ -6529,6 +6740,7 @@ Your heart strains badly under the mass. Eat less, move more.
 Your heart strains under the mass. Eat less, move more.
 Your heartbeat is going wrong. There is too much salt in your blood.
 Your heartbeat is stumbling out of step.
+Your iron runs down quickly. Getting up too fast can put you on the floor.
 Your jaw hangs loose and crooked. Solid food will not pass; WITNESS can guide a manual reduction.
 Your jaw hangs loose, crooked, and useless.
 Your kidneys are shutting down. The salt is building in your blood.
@@ -6596,7 +6808,6 @@ ZOOM
 [ hold TAB - case notes ]
 [A-Za-z0-9_.:/-]+
 [A-Za-z{}-{}_.:/-]+
-[DoomedPanel] open treatment {} on {}
 [DoomedPanel] {}
 [\\p{Cntrl}&&[^\\t]]
 [^A-Za-z0-9 _-]
@@ -6629,6 +6840,8 @@ accent_color
 accepted - {} proceeds
 accepted, but the amputation could no longer begin - nothing was done
 accepted, but the offer no longer applies - nothing was done
+accepted;changed;snapshot;issues
+acceptedCommit
 access your emergency worn equipment
 accessibility
 accessibility profile graphics camera low effects
@@ -6645,6 +6858,7 @@ active
 active loss + pressure
 active spurt
 activeMl;alcohol;bleach
+activeTiming
 active_left
 active_right
 activityMood
@@ -6697,6 +6911,7 @@ allowDoomTitleCard
 allowInterfaceStyle
 allowMoodleHudLayout
 allowNeedGauges
+allowOneClickTreatment
 allowPuppetFit
 allowTemperatureUnit
 allowTransformModelToggle
@@ -6731,6 +6946,7 @@ and there's no one left who remembers them.
 anhedonia
 animal_fat
 annihilation
+annihilation_landmines
 antenna detached ................... ok
 antibi
 antibiotic
@@ -6787,7 +7003,9 @@ assessment;envelope
 at half the value but never faster than ten ticks. Visibility and habitat checks remain.
 at least one dimension must be greater than zero
 at;text;nx;ny;scale;seed
+atmosphere;stagnation;risk;infectionRisk;trend;light
 atmospheric_probe
+atomicLlamaSpit
 attempts;shattered
 attire
 autoDoomOnJoin
@@ -6800,6 +7018,7 @@ avoidedEdges
 back
 back into two unrelated simulations and can therefore produce duplicate warnings.
 backflip
+backpack
 badsleep
 bag
 bags
@@ -6836,12 +7055,14 @@ benefits_from_two_hands
 bent_fore
 bent_hand
 bent_upper
+berries
 bigpain
 bikehelmet
 bilateral
 biochem
 biochem_syringe
 bite
+bits
 bittermoss
 bittermossMaturePatchLimit
 bittermoss_clump
@@ -6932,6 +7153,8 @@ bones
 boneweldingtool
 bone{}
 booby
+boolean
+boolean;{}
 boot
 boredom + repetition
 borosilicate_flask
@@ -6948,6 +7171,7 @@ bpm
 braced_heavy
 brain
 brain {}
+brainDamageDropsItems
 brainGrowSickness
 brainGrowTicks
 brain_damage_per_damage
@@ -6998,6 +7222,7 @@ caltrops
 camera motion accessibility
 camera motion scale
 can never finish the transformation and so can never unlock the Corebound
+candidate
 candybar
 cangetwet
 cannibalism
@@ -7014,9 +7239,18 @@ capsule_tick
 carapace
 carbonatedwater
 carcass
+card
+cardChanges
+cardId
+cardIncompatibilities
+cardSchema
+cardSettingOperation
+cardSettingType
+cardVersion
 cardiac_alarm
 cardiacarrest
 cardio
+cards
 carrier
 case
 caseNotes
@@ -7046,6 +7280,7 @@ ceftriaxone
 ceftriaxone_mash
 ceftriaxone_syringe
 cell;cost
+cells;oversized;unloadedBoundary;openToSky;minX;minY;minZ;maxX;maxY;maxZ
 celsius;externalAccepted
 centre;axisX;axisY;axisZ;halfX;halfY;halfZ;bounds;axisAligned
 centrifuge
@@ -7062,6 +7297,8 @@ chamberId;nominal;ear;mountSeed
 chamber_shell
 changed by this: anyone already transforming stays on MATU. Players can switch their own
 changed;corner;size
+changedCommit
+changedIncident
 changes the row):
 charcoal
 charcoalTicks
@@ -7127,6 +7364,7 @@ clawdamage
 clean
 cleanwater
 clear
+clearSegment
 clearance stock
 cleared
 clearrefusal
@@ -7135,6 +7373,8 @@ click anywhere or ESC to close
 climbingclaws
 clinic
 clinical urgency
+clinicalDirectorServerThread
+clinical_patient
 clip
 clip and both geometry bones must be listed in the contract
 clip and both locators must be listed in the contract
@@ -7145,7 +7385,11 @@ closure
 clotted
 clottingmush
 coarseCell;pressure;lifetimeTicks
+coat
+code
 code;section;clearance;title;related;body
+code;subject
+codeTooLarge
 coffee
 coil
 cold
@@ -7174,16 +7418,20 @@ combatpen
 comfort
 comfortScale
 comfort_ambience
+commit
+common_fern
 compact;panelX;panelWidth;bodyTop;bodyBottom;sidebarX;sidebarWidth;contentX;contentWidth;viewportTop;viewportBottom;footerY;footerWidgetHeight
 compatibility
 compatible
 complete source control
+completed;stumpWound
 completion
 completionPath
 components;totalMb;valid
 composite/eye_gone_left
 composite/eye_gone_right
 composite/{}
+compressedTooLarge
 computeFromItem
 concussion
 cond
@@ -7195,6 +7443,7 @@ conduit.doomedmatu.mode.{}
 confidence
 config gamerules pack developer locks
 configHintShown
+configValue;path;value
 configurable
 confirm
 confused
@@ -7275,11 +7524,13 @@ cueVocalizations
 cue_voice
 cured, not frozen. Acquired immunity is KEPT (it is progress, not residue).
 curios
+current
 custom character lines
 customQuipPerspective
 customQuips
 customization
 cut
+cut the splint off your {}
 cut {}?
 cut1
 cut2
@@ -7289,6 +7540,7 @@ cut5
 cuteye
 cutting
 cut{}
+cx;cy;column;row;previousColumn;previousRow;movement;step
 cxOff;yTop;w;h
 cylinder_index
 cylinder_reload
@@ -7345,6 +7597,7 @@ damage_tags
 damage_types
 deactivated_landmine
 dead_archive_terminal
+deadlineGameTime;hatchOpenedAtGameTime;observedAtGameTime;warned
 death
 death dying terminal cracks warning
 deathMorgue
@@ -7359,6 +7612,12 @@ death_violent
 deathmusic
 decayrate
 decided its intended look sets the forced* value(s) below AND flips the matching allow* to
+decimal
+decimal;{};{};{}
+decimalBounds
+decodeAtomicity
+decoded;error
+decoder
 decrypt
 decrypt required
 decrypted
@@ -7422,6 +7681,7 @@ deepslate
 deepwound
 default
 defaultMode
+defaultValue
 defib
 defib {}
 defib_background
@@ -7431,6 +7691,7 @@ defib_charging
 defib_dial
 defib_shock
 defibrillator
+deflate
 deflates a cube past zero size
 dehydrate
 dehydrated
@@ -7447,6 +7708,7 @@ depth
 depth unresolved
 depth_start
 description
+descriptor
 desensitizedMult
 despair
 despairLockoutTicks
@@ -7468,10 +7730,14 @@ diffuse_muscle_damage_per_damage
 diffuse_skin_damage_per_damage
 dim
 dimension;gameTick;x;z
-dimension;pos;mine;safeWire;expiresAt
 dimension;x;y;z;yRot;xRot
+dimensionId
+dimensionId;position
+dimensionId;position;mineId;seed;startedMillis;deadlineMillis;assisted;overdue;firstCell;strength;revealedWords;flaggedWords
+dimensionId;x;z
 dimensions
 direct pressure
+direction;moveType;capturedAt;transfers
 dirt
 dirt_screen
 dirtiness
@@ -7493,8 +7759,6 @@ dislocated
 dislocatedjaw
 dislocatedspine
 dislocation
-dislocation_bone_base
-dislocation_bone_ghost
 dislocation_bone_move
 dismembered
 dismembered;tiers;conditions;woundFlags;blood;skinDamage;severity;dressings;woundTypes;woundAnchorU;woundAnchorV;woundAges;woundClosures;splinted;tourniquets;wearables;hiddenWearables;somatic;leftHandFunction;rightHandFunction;jawFlags;kuruStage;kuruSeverity;downed
@@ -7725,13 +7989,17 @@ doomedmatu:woundglue_syringe 1 3
 doomedmatu:woundglue_syringe {} {}
 doomedmatu:{}
 doomedmatu_blood_decal
+doomedmatu_clinical_director
 doomedmatu_cyst_grove_maws
 doomedmatu_cyst_sense_networks
 doomedmatu_deep_maw_authored_mesh
 doomedmatu_deep_maw_search_light
 doomedmatu_deep_maw_spores
 doomedmatu_generated_block_provenance
+doomedmatu_landmine_boss_fuses
 doomedmatu_leuten_coded
+doomedmatu_run_contract
+doomedmatu_run_modifiers
 doomedmatu_world_additive
 doomedmatu_world_solid
 doomedmatu_world_translucent
@@ -7756,7 +8024,6 @@ draw
 dressing
 dressingTicks
 dressingVisual
-drift, a septic rigor. Deliberately separate from screenShake, which sits in the
 drink
 drop
 dropCapsuleLockoutSeconds
@@ -7781,6 +8048,9 @@ duplicate bone '{}'
 duplicate gallery edge
 duplicate name '{}'
 duplicate required name '{}'
+duplicateCardSetting
+duplicateCardVersion
+duplicateSetting
 dustmask
 dx
 dy
@@ -7852,6 +8122,7 @@ enabled
 enabled;talent;talentName;talentOnline;localTalent;giveUpAttempts;giveUpShattered;audienceViewers
 enabled;talentUuid;talentName;talentOnline;localTalent;giveUpAttempts;giveUpShattered;audienceViewers
 enchantProtectionScale
+encoder
 encounter's local population cap: a natural spawn is refused while another living Maw
 encumbered
 encumbrancecap
@@ -7894,6 +8165,7 @@ episodeId;fullText;visibleText;revealedCodePoints;fade
 episodeId;startTick;selfText;observerText
 episodeId;talent;createdAt;expiresAt;offsetX;offsetY;offsetZ;size;rollDegrees;variant;blinkOffset;phase
 episodeId;text;readyAt;expiresAt;priority;order;audiencePermit
+episodeId;ticks;triggered
 episodeSeed;crackRoots;crackSegments;chips;shards
 equals
 equipment inventory button offset position
@@ -7902,6 +8174,7 @@ equipment wear prosthetic icon
 equipped;wallRunning;braking;sliding;boosting;mantling;clawClimbing;wallSide;chargePercent
 established
 ethanol
+evaluationGameTime
 evaporator
 event
 event;hand;presentationFlags;weaponIdentity;presentationSerial;muzzleX;muzzleY;muzzleZ;forwardX;forwardY;forwardZ;pitchKick;yawKick
@@ -7917,6 +8190,7 @@ expResilience
 expStrength
 expected handgun, long_gun, braced_heavy, or oversized
 expected linear, smooth, catmullrom, or step
+expectedPreviousRevision
 expensive stock; it is counted per PLAYER across every trader, so shop-hopping does not
 experience
 experiment
@@ -7949,7 +8223,13 @@ eye_left
 eye_loss
 eye_lost
 eye_r
+eye_response
 eye_right
+eyebrows
+eyelinerbot_left
+eyelinerbot_right
+eyelinertop_left
+eyelinertop_right
 eyes
 face
 faces
@@ -7975,6 +8255,7 @@ false
 false (default) = at mood -50 or lower, apathy hides hunger/thirst moodle chips and the optional hotbar gauges without changing either underlying need. true is an explicit presentation override: those channels stay visible, with gauges dimmed.
 false (default) = at mood -{} or lower, apathy hides hunger/thirst moodle chips and the optional hotbar gauges without changing either underlying need. true is an explicit presentation override: those channels stay visible, with gauges dimmed.
 false (default) = grabber plants only ever seize PLAYERS. true = they also seize creatures that wander into reach, thrash them and throw them clear, exactly as they do to you. Bosses are NEVER grabbed whatever you put here - a plant is not going to pick up the wither - and neither are other grabber plants' victims, tamed pets, or anything too big to lift. Narrow it further with grabberMobWhitelist below.
+false (default) = llama spit cannot create tissue damage, deep wounds or retained fragments. It can only contaminate an exposed, undressed wound on the struck region. true = llama spit uses the full projectile wound path, including fragments and catastrophic wounds when those systems are enabled.
 false (default) = no flavor chat message for routine medical actions (bandaging, splinting, disinfecting, etc.); the health panel and moodles already show the result. true = restore the narration.
 false (default) = non-injection treatments on another player proceed immediately after the server validates the healer, patient, range, anatomy and held tool. true = conscious patients must explicitly accept treatments handled by the co-op treatment gate, including amputation of a limb that could still be saved. Injection consent and emergency-equipment access keep their separate rules.
 false (default) = player deaths never create a colonized corpse carrier. true opts the server into a separate hostile carrier entity after a player dies on cyst substrate; it never takes ownership of, deletes or modifies another mod's protected player corpse.
@@ -8124,6 +8405,8 @@ forearm_left
 forearm_right
 foreignBody
 foreignCount
+forge
+format
 format_version
 fracture
 fractured
@@ -8145,6 +8428,7 @@ frost
 frost_fern
 frostbite
 fruit
+fruits
 fuel_generator
 full
 fullText;startTick;endTick;episodeId
@@ -8316,6 +8600,7 @@ head
 head; partial eyes and neck
 head;neck;thorax;upperArm;forearm;hand;abdomen;thigh;calf;foot;eye;drawOrder
 head_band
+header
 heading;body
 headlamp
 headpats
@@ -8442,6 +8727,8 @@ id;region;type;surface;anchorU;anchorV;depth;tissueLoss;skinLoss;bleeding;contam
 id;tex;label
 id;text
 id;title;description;category;aliases;modified;open
+id;version
+id;version;minimumSchema;maximumSchema;changes;incompatibleCardIds
 id;zone;centre;majorRadius;minorRadius;lowerClearance;upperClearance;yaw;radialProfile;floorReliefSalt;roofReliefSalt
 identifier
 idle
@@ -8461,8 +8748,10 @@ impendingdoom
 improvised_charcoal_slurry
 improvised_prosthetic
 inCardiacArrest
-incisionWoundId;quality;transplantTarget;donorHand;harvestHand;donorCeiling;boundItem;boundStack
+incidentId
+incisionWoundId;quality;transplantTarget;donorHand;harvestHand;donorCeiling;boundItem;boundStack;boundProstheticTier
 incompatible
+incompatibleCardId
 incomplete
 index
 index;floor;weight
@@ -8483,6 +8772,7 @@ infectionchance
 inflate
 info
 ingredient
+initial
 inject up to {} mL ({}) into your {}
 inject up to {} mL from {} into your {}
 injection
@@ -8501,6 +8791,8 @@ inspect
 instruments
 insulatedliner
 intact
+integer;{};{};{}
+integerBounds
 intelligence
 intensity
 intent;hand
@@ -8529,6 +8821,10 @@ is it over?
 is {}, iron blocks are {}, obsidian is {}. A block above this is treated as a wall and forces
 isRangedWeapon
 isWornBy
+issuedAt;expiresAt
+issues
+issues;accepted
+issues;resolvedSettings
 it's so quiet.
 item
 item:
@@ -8548,7 +8844,7 @@ jei
 jei.doomedmatu.acquisition.source.{}.description
 jei.doomedmatu.acquisition.source.{}.name
 join
-join;returns;periodic;rescue;giveUp
+join;returns;periodic;eyeResponse;rescue;giveUp
 jointRecovery
 joints
 journal page
@@ -8577,9 +8873,8 @@ keyboard_voice
 keyframe times must be strictly increasing
 keypad_pod
 kidneys
-killing you. 0 disables it; the diseases still announce themselves through sound,
-killing you. {} disables it; the diseases still announce themselves through sound,
 kiln
+kind
 kind;aliveTick;region;magnitude;byOther;count
 kind;evidence;movement;hitVolume;coverRule;cancellation;windupTicks;activeTicks;releaseTicks;hitRecoveryTicks;missRecoveryTicks;hitVulnerabilityTicks;missVulnerabilityTicks
 knee
@@ -8607,6 +8902,7 @@ lair_receiver
 lair_receiver_pulse
 lair_receiver_static
 landmine
+landmine_boss_music
 lantern
 largebattery
 largecarcass
@@ -8662,11 +8958,15 @@ less than one hundred fifty blocks of authored traversal
 letPlayersChooseMode
 lethalHeadTrauma
 leuten_audience
-leuten_coded
 level
+level;anchor
 level;directional
 level;pos
+level;position
+level;tick;position;truth
 levelup
+lid_left
+lid_right
 lifepod_console
 lift
 lightbulb
@@ -8697,6 +8997,7 @@ live_shell
 live_wire
 liver
 liver_function
+loadAtomicity
 loaded
 loader_round_
 loader_round_{}
@@ -8720,6 +9021,7 @@ locomotion_aim
 loneliness + chaos
 long dead
 long_gun
+look response, pain tremor, the hepatic flap, kuru drift and septic rigor.
 loop
 loot
 loss
@@ -8737,6 +9039,7 @@ machete
 machine
 mag_reload
 magazinebase
+magnitude;openedSkin
 maid
 main
 makeshiftdiggingtool
@@ -8747,7 +9050,6 @@ mandible_left
 mandible_right
 manifests;generation
 manual airway procedure
-manual joint reduction
 manual/semi-automatic
 manual_air_sampler
 manualdefib
@@ -8801,6 +9103,7 @@ metal
 method;particulates;bioaerosols;stagnation;respiratoryRisk;uncertainty;trend;dimension;position;capturedAtGameTime;lightLevel;ventilated;climateMeasured;naturalTemperature;effectiveTemperature;thermalSource;sheltered
 mid;out;w;h
 migration
+migrationVersion
 mild
 milk
 minX;maxX;minY;maxY;minZ;maxZ
@@ -8830,6 +9133,7 @@ minecraft:oak_planks 5 2
 minecraft:oak_planks {} {}
 minecraft:stick 4 2
 minecraft:stick {} {}
+mineralParticulate;bioaerosol;chemicalVapour;combustionSmoke;airExchange;mechanicallyVentilated
 mineral_supplement
 minigame/bandage_circle_inner
 minigame/bandage_roll
@@ -8861,7 +9165,9 @@ modeChangeArmed
 modeChosen
 model unresolved
 modes
-modifier attention talent immortal romance eyes
+modifier challenge Leuten Coded annihilation landmines talent immortal
+modifierId;enabled
+modifiers
 modpack resourcepack datapack compatibility
 mood
 mood {} · trauma {}
@@ -8923,6 +9229,7 @@ must point to textures/...png
 must use only letters, digits, '_', '.', ':', '/', or '-' and be at most 128 characters
 must use only letters, digits, '_', '.', ':', '/', or '-' and be at most 96 characters
 must use only letters, digits, '_', '.', ':', '/', or '-' and be at most {} characters
+mutation
 muting sponsor daemon ............. ok
 muzzle
 muzzleVelocity;gravity;drag;maxRange
@@ -8950,6 +9257,7 @@ name;parent;pivot;position;rotation;scale
 name;parent;pivot;rotation;cubes;meshes
 named
 named mod is present and falls back to Doomed when it is absent or its API is unusable.
+nanoTime;effectiveMillis
 nap unconscious sound floor
 nap unconscious sound volume
 naturalTemperature;localInfluence;authoredInfluence;effectiveTemperature;radiantStrength;stagnation;sheltered;ventilated;furnaceClass;dominantSource
@@ -9079,6 +9387,10 @@ only expired blood carried
 only one functional hand · effective compressions require both arms
 open
 open {}
+operand
+operandDecoder
+operandEncoder
+operation
 operational
 operator readiness unavailable
 operator substituted without consent
@@ -9118,7 +9430,9 @@ origin
 origin;size;pivot;rotation;inflate;mirror;uv
 origin;u;v;normal;spanU;spanV
 origin;velocity;side;startTick;strength;seed
+outcome
 outcome;appliedMagnitude;defeatThreshold;regionalProtection
+outcome;changed;incident
 outcome;intXp
 outer
 outertorso
@@ -9141,6 +9455,8 @@ owner
 owner and payload journals do not describe the same transactions
 owner journal contains an invalid or duplicate owner
 owner journal is not a string list
+owner;revision;settings
+ownerId
 oxygen
 oxygen carried; treatment hand unavailable
 oxygen_compressor
@@ -9189,7 +9505,6 @@ part;id
 part;method;tick;findings
 partOrdinal;accepted
 particulate_filter
-particulates;bioaerosols;stagnation;risk;trend;light;ventilated
 path
 path;completedVersion
 path;def
@@ -9201,18 +9516,20 @@ pathogenLoad
 pathogenPeak
 pathogenTimer
 paths
+patient
 patient;expiresAt
 patient;implied;expiresAt
 patient;part;expiresAt
-patient;part;kind;heldItem;singleUse;expiresAt
-patient;part;tool;implied;expiresAt
 patientEntityId;patientUuid;patientName;snapshot
 patientId
 patientId;partOrdinal
 patient_medical_gear
+payload
 payload journal contains a non-string record
 payload journal contains an invalid or duplicate owner
 payload journal is not a string list
+payload;error
+payloadTooLarge
 payoff spaces are not meaningfully separated
 payoff spaces collapse into one traversal beat
 pelvis
@@ -9228,17 +9545,22 @@ percent
 perform transplant surgery using {} (harvest quality {}%, viability {}%, effective quality {}%)
 periodic
 perk;trackX;trackTop;trackBottom;thumbY;thumbH;travel;maxScroll
+persistence
 persistentAbsenceRoots
 pestle_mortar
 phantomCooldown
 phantomEpisode
 phantomPain
 phantomRisk
+phase
 phase;instruction
+phaseLatches
 physicalArm;normal;pose
 physicalHand;function;biological;reason
 physiology
 pickaxe
+piece '{}' has a partial vertex
+pieces
 pistol
 pistol_shot_lock_open
 pistol_shot_mechanism
@@ -9249,6 +9571,8 @@ pitch
 pivot
 pivot_y
 pivot_z
+pivots
+pivots;pieces
 pizzaslice
 placed_bag
 plan;sampler
@@ -9270,18 +9594,22 @@ point_idle1
 point_idle2
 point_idle{}
 policy
+ponytail
 popcorn
 poppy_latex
 port_insert
 port_shell
+portable
 portable oxygen active · {} total
 portable oxygen already active
-pos;action;slot
-pos;safeWire;assisted
-pos;seed;live;booby;assisted
+pos;action;cell;token
+pos;action;slot;token
+pos;safeWire;assisted;token;legacy;fuseMillis;sequenceMillis;strength;assistedCell;revealedWords;flaggedWords;hitMineWords;adjacentCounts
+pos;seed;live;booby;assisted;token
 pos;side
 pos;token;inputPreview;outputPreview
-pos;wire
+pos;token;result
+pos;token;strength;assistedCell;revealedWords;flaggedWords;hitMineWords;adjacentCounts;state
 pose
 pose;visible;skipDraw
 poseStack
@@ -9307,6 +9635,7 @@ presentationDefaultsSchemaVersion
 presentation_bones
 presentation_preset
 presentations;generation
+preserved
 preset
 preset name
 press {} or ESC to close - the clock is still running
@@ -9317,6 +9646,8 @@ pressure_crack
 pretending to load...
 preview
 preview_all
+previous
+previous;candidate
 prey contribute to its territorial encounter. 96 is the authored default.
 prey contribute to its territorial encounter. {} is the authored default.
 prion
@@ -9344,8 +9675,10 @@ progressTicks
 prosthetic
 prostheticCondition
 prostheticTier
+prosthetic_fit
 prosthetic_lubricant
 provenance. Harvested tissue uses its donor and tissue class instead. Cooking never clears
+publishItem
 pull the tourniquet OFF your {}
 pulmonaryembolism
 pump
@@ -9405,6 +9738,8 @@ recipient type unknown
 recipientType;bags
 recoil
 recoil;recoilCompression;recoilSide;shotPhase;shotStrength;cycle;manualCycle;magazine;pump;shell;portShell;internalHull;casing;pumpCasing;trigger;flash;rearImpact;forwardImpact;magSeat;gate;shellSeat;handlingFlair;actionPhase;action;handlingVariant;flashSeed;shellChainIn;shellChainOut;magazinePresent;feedShellAvailable;actionEjects
+record;rejection
+recordSchema
 recovered
 recrystallizer
 red
@@ -9415,6 +9750,8 @@ red_cell_fraction
 redacted
 redblood
 redcells
+reduced
+reducer
 reference/ASSET_OVERRIDE_GUIDE.md
 refill, the two waits stack and the shop reads as a one-time loot pinata.
 refined_salt
@@ -9423,6 +9760,7 @@ refusal_chord
 refusing to commit an invalid recovery payload for {}
 regenSicknessScale
 region
+region;skinLoss;muscleLoss;depth;bleeding;contamination;vessel
 regionKey
 regionKey;displayName;elapsedSeconds
 regionOrdinal;woundId
@@ -9431,7 +9769,10 @@ register_api
 registeredPathsSha256
 registeredPathsSha{}
 registration failure
+registry
+registryDigest
 rej
+rejectedCommit
 rejection;pos;token;inputPreview;outputPreview
 relays waking one at a time
 reliefcream
@@ -9440,6 +9781,8 @@ reload_cycle
 reload_first_person
 reloaded
 rem
+remain unchanged and are still reported through sound, the HUD and moodles.
+remaining;total
 remove
 renal_function
 renalfailure
@@ -9457,6 +9800,7 @@ requireCrossPlayerInjectionConsent
 requireCrossPlayerTreatmentConsent
 required field is missing
 required name '{}' is missing
+requiredStableTicks
 required_bones
 required_locators
 requires_two_hands
@@ -9464,6 +9808,9 @@ rescue
 reset
 reset it. Raise it if scavenging feels punished rather than paced.
 residualPain
+resolutionAtomicity
+resolvedSettings
+resolver
 resourcePackDialogue
 resources
 respiration
@@ -9471,13 +9818,16 @@ respiration_damage_per_damage
 restart, which players cannot force.
 restore
 restore lost volume
+restoreAtomicity
 restriction active while reaction persists
 restrictions
 result
+result;changed;changedRules
 result;rejectedEngagementShell
 return
 return_out
 revenge
+revision
 revivol
 revolver_click
 revolver_cock
@@ -9485,6 +9835,7 @@ revolver_dry
 revolver_luck
 revolver_reload
 revolver_shot
+rewardUnavailable
 rhythm + pulse
 rhythmReadyTick
 rifle
@@ -9514,7 +9865,6 @@ riothelmet
 rippable
 rippeddressing
 ritual
-ritual section above, because this motion is how a disease tells you which one is
 ritualIntensity;skipIntro;shake;shakeIntensity;afflictionMotion;vision;brainStatic;gore;shader;failurePanel;eyeLoss;weaponMotion;mawSpores;mawFog;mawGlare;gearButton;gearPlacement;gearOffsetX;gearOffsetY;deceptiveVitals;needNumbers;apathyNeeds;vanillaHearts;hungerBar;thirstBar;unit;moodleScale;moodleAnchor;moodleX;moodleY;moodleInward;witnessScale;witnessReduced;witnessScanlines;painVoice;cueVoice;drones;sleepMuffle;sleepFloor;chatColor;overhead;typingSound;keyboardSound;pitch;resourceDialogue;titleCard;accent;uiStyle;blood;doll;hideTransform;oneClick
 ritual_intensity
 rl;w;h
@@ -9551,6 +9901,8 @@ rowCount
 rows
 rum
 run
+runContractCommitState
+runContractRuntimeRejected
 runnersHigh
 runners_high
 rup
@@ -9574,12 +9926,17 @@ scaffolding
 scale
 scale outside 0..4
 scale outside {}..{}
+scale;originX;originY;bandHeight;ruleThickness
 scale;scalePivot;hip;sight;hipRotation;sightRotation;recoil;shoulderArc;inertiaScale;idleSway;aimTiming
 scaleX
 scaleY
 scale_pivot
 scar
 scarf
+scenarioType
+schemaVersion
+schemaVersion;incidentId;ownerId;patientId;dimensionId;anchor;scenarioSeed;scenarioType;phase;activeTicks;stableTicks;lastEvaluationGameTime;phaseStartedAtActiveTick;completionLatched;failureLatched;rewardLatched
+schemaVersion;seed;revision;cards;resolvedSettings;registryDigest;status
 schnapps
 scrapcube
 scrapmetal
@@ -9603,12 +9960,15 @@ section;name;path;value;def;range;modified;restart;comment;editable
 sedation
 sedative
 sedative_syringe
+seed
 segment absent
+segments
 selected {} is {} · put it away
 selected {} {}
 selectedWoundId
 self
 self;observerMode;observer
+selfIncompatibleCard
 self_defib
 self_maintenance
 selfharm
@@ -9626,8 +9986,14 @@ serum_potassium
 server
 server simulation disabled
 server value is what actually renders, so a player cannot bypass it by hand-editing their
+server;dimension;chunkPos
+server;dimension;pos
+server;dimension;pos;capsuleInstance;token;openedAtNanos
+server;dimension;pos;crateInstance;token;openedAtNanos;lastStuckNanos
 server;dimension;pos;hand;input;boundStack;output;token;openedAtNanos
+server;dimension;pos;mine;mode;safeWire;board;token;openedAtNanos
 server;patient;expiresAt;lastCompression;accepted;faltered
+server;player
 server;until;systolicFloor
 server_config
 server_rules
@@ -9635,6 +10001,18 @@ sessionId;stage;quality
 setQuenched
 setShouldTickThirst
 setThirst
+setting
+settingEncoder
+settingId
+settingId;operation;operand
+settingKind
+settingOperand
+settingOperandEncoder
+settingOperation
+settingRange
+settingType
+settingTypeOrRange
+settingValue
 settings
 severe
 severe burns.
@@ -9644,6 +10022,7 @@ severed_tentacle
 severing bureau uplink (software) . failed
 severity
 severity;cause;score
+severity;consciousnessDip;collapseChance
 sha256
 shaderVision
 shader_vision
@@ -9666,7 +10045,6 @@ shock device depleted
 shock_per_damage
 shooter;hand;tick
 shooterId;muzzleX;muzzleY;muzzleZ;forwardX;forwardY;forwardZ;floorPos;floorStateId;seed
-shop_open
 short · {}/{} compatible bags
 short · {}/{} mL
 shot_impulse
@@ -9693,7 +10071,7 @@ showVanillaHealth
 shrapnel
 shrapnel_piece
 sick
-sickness camera shake disease
+sickness pain camera mouse look shake disease
 sickness {}
 sicknessAmount
 sicknessPerDamage;shockPerDamage;brainDamagePerDamage;respirationDamagePerDamage;diffuseSkinDamagePerDamage;diffuseMuscleDamagePerDamage;organDamagePerDamage
@@ -9736,6 +10114,8 @@ smallmagazine
 smallpack
 smooth
 snapshot
+snapshot;error
+snapshot;migrationVersion
 sneakers
 so on their own lines, and this section also includes a few related modes and limits.
 soak
@@ -9807,7 +10187,9 @@ ssriLevel
 ssriOnset
 ssriTolerance
 ssritolerance
+stability;verdict
 stable
+stableTiming
 stack;arm
 stack;quality
 stack;table;weight
@@ -9827,12 +10209,14 @@ start;end;endRadius;alpha
 startNanos;deadlineNanos
 startingArmTraitApplied
 starving
+state;outcome
 state;progress;tension;end;side;lift
 staticIntensity
 staticdying1
 staticdying2
 staticdying3
 staticdying{}
+status
 status panel. Every allow* switch defaults true (players may customize). A modpack that has
 status;blockers
 status;blockers;failure
@@ -9849,6 +10233,7 @@ stick
 stiffness;damping;maxOffset;drivePitch;driveVert;driveSide;driveTurn;bendCap;velocityDrive
 still
 still warm
+stillInstalled
 stimMidMax
 stimMidRemaining
 stimStepAccum
@@ -9868,12 +10253,15 @@ streptokinase_syringe
 striderpelt
 strikes run out. Each module's status light turns green when it is disarmed.
 string
+stringLength
 stroke
 strokeAmount
 stumpWound
 style
 subclass that mod waits for. It applies wherever a character is given a run
 subclinical / {}
+subject
+subjectId;host;body;acceptsCare
 success;value;message
 suicide
 sulfur_feedstock
@@ -9884,6 +10272,7 @@ sun_fern
 support_grip
 support_hand
 support_shoulder
+supporting hand
 suppressant
 suppressantTicks
 surface
@@ -9893,6 +10282,7 @@ survived_doomed
 susceptibility {}
 suture
 sutured
+swelling
 synth:{}
 syringe
 syringe_filler
@@ -9908,6 +10298,7 @@ taint_campfire
 taint_smelting
 taint_smoking
 target
+target/weight length mismatch
 target;orientation;mode;supports;speedScale
 telemetry
 temperature
@@ -9919,6 +10310,7 @@ temperatureUnit
 tendSeconds
 tensed
 tequila
+terminalLatches
 terminal_glass_break
 terminal_glass_strain
 terrain damage, attack timing or recovery windows. 1.0 preserves authored consequences.
@@ -9962,7 +10354,6 @@ that wants disease to exist without plagues sweeping the base; 0.0 stops all spr
 that wants disease to exist without plagues sweeping the base; {} stops all spread while
 the 
 the Customization panel, so either mode can wear any body. Existing characters are never
-the HUD and your moodles.
 the circuitry is live now - work carefully
 the feature attempts a site on average once per 24 eligible calls; 1 = every eligible
 the feature attempts a site on average once per {} eligible calls; {} = every eligible
@@ -10007,7 +10398,6 @@ threat;lastHitTime;expiresAt
 threat;source;distanceSqr;impendingLevel;recognized;damageFraction
 throttle exists so a player cannot dump a mountain of cheap junk to bank credit for the
 through-and-through
-tick;position;truth
 tick;stack;hand;slot;side;strength
 ticks
 ticks;sitTicks;sitCreditToday;day
@@ -10036,11 +10426,17 @@ to
 to blood, pain and organs without running a second thirst drain.
 toString
 token;patient;part;drug;mixed;vesselState;vessel;implied;maxMl;expiresAt
+token;patient;part;kind;heldStack;selectedSlot;woundId;nextSequence;intermediateSteps;fragmentWoundIds;initialFragmentCount;successfulFragmentSteps;lastAppliedTick;expiresAt
+token;patient;part;stage;longitudinal;vertical;proximalAnchor;proximalTension;distalAnchor;distalTension;openedAt;lastActionTick
+token;patient;part;tool;implied;heldStack;selectedSlot;expiresAt
+token;patient;type;unit;selectedSlot;expiresAt
 token;success
 tolerance
 too many nutrient sources in one file
 too many profiles in one file
 too many recipes in one file
+tooManyCards
+tooManySettings
 tool
 tool: 
 toolbox
@@ -10080,13 +10476,14 @@ trader_lair
 trader_lair_hum
 trader_lair_pressure
 trader_maid
+trailingPayload
 trailing_tether
 traitHeadStartLedgerVersion
 traitSchemaVersion
 traitStartingBudget
 traits
 traitsChosen
-traitsChosen;aliveTicks;caseOpened;caseNotes;transformProgress;transformStage;spurtsDone
+traitsChosen;aliveTicks;caseOpened;caseNotes;transformProgress;transformStage;spurtsDone;happiness;trauma
 transformPain
 transformStage
 transformation
@@ -10120,6 +10517,7 @@ trigger_pull
 trigger_shoulder
 triggered
 true
+true (default) = clients may use the one-click medical accessibility option. The server resolves splinting as a fixed competent, non-perfect application; the client cannot claim its own quality. false = all splint procedures must be performed manually.
 true (default) = cyst eyes sweep their spotlights, are pulled toward a carried light, and report a player they catch to nearby Deep Maws. false leaves them standing as inert scenery - they stop sweeping, stop lighting the cave and stop telling anything where you are.
 true (default) = cyst territory runs its bounded biological lifecycle: exposed larvae, interruptible dormant corpses, motile carriers and finite rooted brood nodes. false keeps the complete biome palette and water pods but removes this hostile ecology.
 true (default) = each generated cyst grove remembers server-confirmed disturbance. Being seen, heard, breaking tissue, shooting lenses, mining and starting nearby fires raise a hidden shared value that only speeds the eyes' ordinary sweep. It never widens their cone, bypasses cover, changes calm green beams to yellow, or directly alerts a Maw.
@@ -10146,12 +10544,15 @@ true = extra MAX HEALTH from RPG/levelling mods toughens the body: incoming sim 
 true = extra MAX HEALTH from RPG/levelling mods toughens the body: incoming sim damage is divided by maxHealth/{}, LINEAR rather than diminishing, because diminishing returns get worse the harder a pack scales. Clamped by maxHealthScaleCap, never below {}. Off by default: an easing for packs that are not about hardcore survival.
 true = healing hearts additively dull pain across the whole body, lightly, so it takes a lot of healing to counteract one broken limb. ~1.5 pain per HP, so a full Regeneration II does NOT clear one broken bone - it is relief, not an analgesic, and it never replaces a splint or a syringe. Independent of vanillaHealingBridge: a pack can want the edge taken off without wanting hearts to close wounds. Off by default.
 true = healing hearts additively dull pain across the whole body, lightly, so it takes a lot of healing to counteract one broken limb. ~{} pain per HP, so a full Regeneration II does NOT clear one broken bone - it is relief, not an analgesic, and it never replaces a splint or a syringe. Independent of vanillaHealingBridge: a pack can want the edge taken off without wanting hearts to close wounds. Off by default.
+true = use the old four-wire landmine defusal panel. false (default) = use the Minesweeper boss encounter with its own live fuse.
 true = vanilla/modded HEALING (golden apples, Regeneration, healing spells - anything that fires a heal) reaches the body sim: it clots bleeding wounds (shrapnel still holds them open), closes skin and muscle on the worst limb, and per scope restores blood or chips infection. It NEVER touches brain damage, set fractures or dislocations - those always want real treatment. Off by default: Doomed healing is the point of Doomed.
 true = when a player types doom in chat, a DOOMED card slams onto every Doomed player's screen with a fanfare. It is a gag and it is on by default. Turn it off on a public server: anyone can type the word, so anyone can put a banner across everyone else's view. Each player can also switch it off for themselves in the client settings; this is the switch they cannot ignore.
 true = your main inventory grid is limited by STRENGTH: the hotbar is always yours, plus 3 main slots at Strength 0, unlocking upward to all 27 as you train it. false = every vanilla slot is available from the start and never locks. TURN THIS OFF for compatibility with any mod that rearranges the player inventory (Petite Inventory, backpack/slot mods): both of you are laying claim to the same slot indices and the mod that owns the layout should win. Strength keeps training either way, so turning this back on resumes where you are rather than at zero.
 true = your main inventory grid is limited by STRENGTH: the hotbar is always yours, plus {} main slots at Strength {}, unlocking upward to all {} as you train it. false = every vanilla slot is available from the start and never locks. TURN THIS OFF for compatibility with any mod that rearranges the player inventory (Petite Inventory, backpack/slot mods): both of you are laying claim to the same slot indices and the mod that owns the layout should win. Strength keeps training either way, so turning this back on resumes where you are rather than at zero.
 true = your vanilla HEALTH BAR is driven by your overall condition (brain / blood) so external health-bar HUD mods show something meaningful instead of always-full. The bar never reaches 0 - real death is still brain-death only, the mod keeps owning when you actually die. On by default so health-bar mods work out of the box. false = Doomed stops using hearts as a condition display. Ordinary damage may still dent the vanilla bar, especially while starving with Doomed hunger disabled, but cannot cause Doomed death.
 true = your vanilla HEALTH BAR is driven by your overall condition (brain / blood) so external health-bar HUD mods show something meaningful instead of always-full. The bar never reaches {} - real death is still brain-death only, the mod keeps owning when you actually die. On by default so health-bar mods work out of the box. false = Doomed stops using hearts as a condition display. Ordinary damage may still dent the vanilla bar, especially while starving with Doomed hunger disabled, but cannot cause Doomed death.
+truncatedPayload
+trustedClock;elapsedTicks;energyCost;poweredFraction
 tt
 tube_insert_cycle
 tube_insert_impulse
@@ -10201,8 +10602,12 @@ unknown organ '{}'
 unknown parent '{}'
 unknown presentation field (gameplay values are not permitted here)
 unknown presentation-manifest field (gameplay fields are forbidden)
+unknownCardSetting
 unmodified
 unspecified
+unstable
+unstable - reseat
+unsupported authored geometry format {}
 unsupported geometry field
 unsupported version '{}' (expected '1.12.0')
 unsupported version {}
@@ -10217,12 +10622,16 @@ upper_arm_left
 upper_arm_right
 usableItems;spentItems;totalCondition;bestCondition;bestCapacity
 use {} on your {}
+useLegacyLandmineDefusalMinigame
+utf8
+utf{}
 utilities
 uv
 uv_size
 validation
 validation still decide whether a step is legal. 1.0 preserves the authored encounter.
 validation still decide whether a step is legal. {} preserves the authored encounter.
+validationAtomicity
 value
 value;velocity
 valve colour's release digit anywhere in its seconds:
@@ -10389,6 +10798,7 @@ wound;x;y;radius;depth
 woundLedgerVersion
 woundglue
 woundglue_syringe
+wounding;openedSkin
 woundless
 wounds
 woundstapler
@@ -10476,6 +10886,7 @@ your
 {} accepted, but the amputation could no longer begin.
 {} accepted, but the procedure could no longer begin.
 {} accepted.
+{} active. 
 {} ago
 {} already has a tourniquet - empty-hand click to remove it
 {} assay: {}% +/-{}; contamination {}% +/-{}
@@ -10499,6 +10910,7 @@ your
 {} depleted
 {} did not respond - give it a moment.
 {} did not respond. Nothing done.
+{} disables this presentation; server-owned accuracy, disease, pain and consciousness
 {} disinfectant dose(s)
 {} disinfectant dose(s) carried
 {} dislocated
@@ -10507,7 +10919,7 @@ your
 {} entry
 {} exceeds two machine slots
 {} fractured
-{} fractured - hold a splint and click here to set it
+{} fractured - hold a splint and click here to stabilize it
 {} fractured - keep it still; an ordinary splint cannot set this region
 {} function is limited by the fitted prosthesis.
 {} geometry '{}' has missing {} or empty {} required mechanism bones; using the fail-soft renderer
@@ -10555,6 +10967,7 @@ your
 {} is treating you
 {} isn't bleeding - nothing to sear shut
 {} isn't dislocated - the wrench won't help here
+{} items in this lot
 {} joint mechanically unstable
 {} limited by prosthetic condition
 {} liquid
@@ -10584,7 +10997,6 @@ your
 {} result{}. Results open the exact control or its focused editor.
 {} retained
 {} root case(s)
-{} rounds in this lot
 {} saline bag START · no blood · reassess oxygenation
 {} saline bag(s) ready
 {} short · {}/{} mL
@@ -10616,7 +11028,7 @@ your
 {}% pure
 {}% spent
 {}% toward Level {}
-{}-{} ACQUIRE   ARROWS SELECT   ENTER CONFIRM
+{}-{} BUY   ARROWS SELECT   ENTER BUY
 {}-{} Sv
 {}-{} mSv
 {}-{} mSv/h
@@ -10672,6 +11084,7 @@ your
 {}: {} / 16000 mB
 {}: {}{} px
 {}@{}/distance={}/orientationError={}/compressed={}/blockers={}
+{}Configure Leuten Coded and authored challenge rules.
 {}Heat {}
 {}TANK {}
 {}_middle

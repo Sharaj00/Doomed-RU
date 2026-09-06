@@ -419,7 +419,6 @@
   "block.doomedmatu.gunmine": "Стреляющая мина",
   "subtitles.doomedmatu.collardetonate": "Ошейник взрывается",
   "subtitles.doomedmatu.beep": "Писк клавиатуры",
-  "subtitles.doomedmatu.shop_open": "Магазин открывается",
   "subtitles.doomedmatu.radiation": "Детектор радиации",
   "subtitles.doomedmatu.pistolshot": "Выстрел из пистолета",
   "subtitles.doomedmatu.rifleshot": "Выстрел из винтовки",
@@ -1004,5 +1003,10 @@
   "gui.doomedmatu.machine.fluid.pump.tip": "Перекачать содержимое бака %s в соседние обработчики жидкости на гранях в режиме вывода или обоих направлений.",
   "gui.doomedmatu.machine.fluid.busy.tip": "Управление баком A заблокировано, пока обрабатывается партия.",
   "gui.doomedmatu.machine.fluid.incompatible.tip": "В обоих баках должна быть совместимая жидкость.",
-  "biome.doomedmatu.cyst_jungle": "Кистовые джунгли"
+  "biome.doomedmatu.cyst_jungle": "Кистовые джунгли",
+  "jei.doomedmatu.acquisition.source.common_fern.description": "Сломайте обычный папоротник Minecraft, чтобы получить 1 волокно папоротника, или большой папоротник, чтобы получить 2. Трава не даёт волокна.",
+  "jei.doomedmatu.acquisition.source.common_fern.name": "Сбор обычного папоротника",
+  "message.doomedmatu.syringe_campfire_unlit": "Костёр должен быть зажжён.",
+  "screen.doomedmatu.last_stand.resolve": "Ещё нет.",
+  "tooltip.doomedmatu.syringe_contaminated": "Загрязнён. Используйте на зажжённом костре для стерилизации."
 }

@@ -1,12 +1,12 @@
 # Doomed RU
 
 Russian localization for **[Doomed](https://www.curseforge.com/minecraft/mc-mods/doomed)**
-(`doomedmatu`) 0.3.9 — Minecraft 1.20.1, Forge.
+(`doomedmatu`) 0.4.5 — Minecraft 1.20.1, Forge.
 
 *[Русская версия](README.ru.md)*
 
 Client-side only. **The Doomed jar is never modified** — keep the original
-`doomedmatu-0.3.9.jar` and drop this addon next to it.
+`doomedmatu-0.4.5.jar` and drop this addon next to it.
 
 ---
 
@@ -17,8 +17,8 @@ different approach. This addon covers all three.
 
 | Channel | Volume | How it is translated | Status |
 |---|---|---|---|
-| `lang/en_us.json` — proper translation keys | 1006 keys | a normal lang file | **1006 / 1006** |
-| Hardcoded string literals in code | ~9 200 constants | runtime substitution | ~68 % |
+| `lang/en_us.json` — proper translation keys | 1010 keys | a normal lang file | **1010 / 1010** |
+| Hardcoded string literals in code | ~9 600 constants | runtime substitution | ~67 % |
 | Datapack JSON — journal, traders, imaginary friend, advancements | 164 unique entries | runtime substitution, whole entries | **164 / 164** |
 
 Item names, block names, tooltips and subtitles come from the first channel,
@@ -47,8 +47,8 @@ wrapping, and text drawn by vanilla widgets on the mod's behalf.
 straight to the screen, bypassing `Component`: `GuiGraphics.drawString`,
 `drawCenteredString`, `Font.width`.
 
-Three narrow Mixins handle WITNESS, the status panel, and animated thoughts:
-full labels are translated before wrapping or clipping, while thoughts reveal
+Four narrow Mixins handle the ritual intro, WITNESS, the status panel, and
+animated thoughts: full labels and paragraphs are translated before wrapping or clipping, while thoughts reveal
 a stable Russian line during the typewriter effect. They do not redirect every
 method in every Doomed class, so target-method staticness cannot conflict.
 
@@ -102,8 +102,8 @@ phrases are unique enough to translate anywhere.
 
 ## Install
 
-1. Build (or download) `doomedru-1.1.2.jar`.
-2. Drop it into `.minecraft/mods` next to `doomedmatu-0.3.9.jar`.
+1. Build (or download) `doomedru-1.2.0.jar`.
+2. Drop it into `.minecraft/mods` next to `doomedmatu-0.4.5.jar`.
 
 Client-side only — do not install it on a server.
 
@@ -147,7 +147,7 @@ into the output).
 gradlew.bat build
 ```
 
-The result is `build/libs/doomedru-1.1.2.jar`.
+The result is `build/libs/doomedru-1.2.0.jar`.
 
 The Gradle wrapper binary is not included — take `gradlew`, `gradlew.bat` and
 `gradle/` from the official [Forge 1.20.1 MDK](https://files.minecraftforge.net/net/minecraftforge/forge/index_1.20.1.html).
@@ -177,10 +177,10 @@ Run extraction and the audit after a Doomed update; they will show what changed.
 ## Current coverage
 
 ```
-lang keys          1006 / 1006
+lang keys          1010 / 1010
 narrative text      164 / 164   (20 426 characters)
-dictionary        5 074 strings + 278 patterns
-still untranslated 1 645 strings (107 607 chars) + 596 patterns
+dictionary        5 155 strings + 312 patterns
+still untranslated 1 709 strings (109 331 chars) + 575 patterns
 ```
 
 Most of what remains is config descriptions — long paragraphs visible only in
@@ -197,16 +197,16 @@ so most of the interface is hardcoded English rather than translation keys.
 Every localization therefore has to intercept rendering instead of shipping a
 lang file.
 
-The Chinese `zh_cn.json` in the jar shows the effect clearly: it covers 960 of
-1006 lang keys — nearly complete for that channel — yet a Chinese player
+The Chinese `zh_cn.json` in the jar shows the effect clearly: it covers 964 of
+1010 lang keys — nearly complete for that channel — yet a Chinese player
 still sees an entirely English HUD, triage panel and tablet, because those
 strings never pass through the lang system.
 
 Moving the UI text to `Component.translatable(...)` keys would let every
 language ship as a plain resource pack, and addons like this one could shrink
 to a lang file. If that is ever interesting, the extracted string inventory in
-`build/doomedru-strings.json` is a ready-made starting point: 9 191 constants
-and 908 concat templates, grouped by class.
+`build/doomedru-strings.json` is a ready-made starting point: 9 582 constants
+and 924 concat templates, grouped by class.
 
 No pressure either way — the mod is excellent, and this is offered as data
 rather than a complaint.

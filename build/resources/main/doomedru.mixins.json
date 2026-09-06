@@ -6,6 +6,6 @@
   "refmap": "doomedru.refmap.json",
   "plugin": "ru.doomedru.mixin.DoomedRuMixinPlugin",
   "mixins": [],
-  "client": [ "DiagnosticTabletScreenMixin", "StatusPanelScreenMixin", "QuipRevealMixin" ],
+  "client": [ "DiagnosticTabletScreenMixin", "RitualScreenMixin", "StatusPanelScreenMixin", "QuipRevealMixin" ],
   "injectors": { "defaultRequire": 0 }
 }

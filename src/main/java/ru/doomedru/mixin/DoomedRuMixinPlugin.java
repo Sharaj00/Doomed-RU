@@ -17,7 +17,7 @@ import java.util.concurrent.ConcurrentHashMap;
  *                                включая подписи виджетов и подсказки.
  *                                Выключается флагом -Ddoomedru.globalHook=false.
  * doomedru.mixins.json         - узкие исправления для конкретных механизмов
- *                                Doomed: перевод WITNESS и панели состояния
+ *                                Doomed: перевод интро, WITNESS и панели
  *                                до обрезки, стабильная выдача мыслей.
  */
 public class DoomedRuMixinPlugin implements IMixinConfigPlugin {
