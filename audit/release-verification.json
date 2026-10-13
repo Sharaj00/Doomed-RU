@@ -1,0 +1,40 @@
+{
+  "original_sha256": "56bb50c5dafbc3daf6a7dae407adaef9084288ab9c25b7e1c7d2c615abdb21d6",
+  "release_sha256": "5ecc0b2b962c8c215cb563f8cadefd630ef2f565a91dbe17b8c8cf3a2f3c2686",
+  "release": "C:\\Games\\PineconeMC\\instances\\DOOMED\\Doomed Russian Fresh\\build\\libs\\DoomedRU-2.0.0.jar",
+  "language_keys": 1148,
+  "core_config_comments": 171,
+  "traits": 22,
+  "translated_preset_lines": 129,
+  "foreign_language_keys": [],
+  "foreign_transform_targets": [],
+  "packaged_resources": [
+    "assets/doomed_ru_fresh/dialogue/leuten_coded.json",
+    "assets/doomed_ru_fresh/literal_ru.json",
+    "assets/doomed_ru_fresh/moodle/text.json",
+    "assets/doomed_ru_fresh/oripathy/presentation.json",
+    "assets/doomed_ru_fresh/server_messages.json",
+    "assets/doomedmatu/font/leuten_scribble.json",
+    "assets/doomedmatu/font/matu_fight.json",
+    "assets/doomedmatu/lang/ru_ru.json"
+  ],
+  "client_audit": {
+    "transformed_classes_loaded": 227,
+    "optional_targets_unavailable": [
+      "net.mattlives.doomedmatu.compat.jade.FluidBarrelProvider",
+      "net.mattlives.doomedmatu.compat.jade.MachineProvider"
+    ],
+    "russian_assertions": 129,
+    "server_rule_comments_checked": 164,
+    "checks": 301,
+    "status": "passed"
+  },
+  "version": "2.0.0",
+  "display_name": "DoomedRU",
+  "renaming_verification": {
+    "previous_runtime_tested_artifact": "doomed-russian-fresh-0.4.7.3-1.0.1.jar",
+    "only_changed_archive_entry": "META-INF/mods.toml",
+    "code_and_translation_resources_identical": true,
+    "new_client_launch_performed": false
+  }
+}

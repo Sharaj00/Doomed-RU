@@ -1,0 +1,140 @@
+{
+  "net/mattlives/doomedmatu/client/ClientQuipStore": [
+    "put(IIIIJLjava/lang/String;Ljava/lang/String;Z)V"
+  ],
+  "net/mattlives/doomedmatu/client/LeutenCodedClient": [
+    "showAffection(JLjava/lang/String;)V",
+    "queueAffection(JLjava/lang/String;IJ)V",
+    "queueAffection(JLjava/lang/String;IJJ)V",
+    "queueAffection(JLjava/lang/String;IJJZ)V"
+  ],
+  "net/mattlives/doomedmatu/client/screen/ArrowExtractionScreen": [
+    "drawMeter(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;FI)V"
+  ],
+  "net/mattlives/doomedmatu/client/screen/DeathScreen": [
+    "drawRight(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;III)V"
+  ],
+  "net/mattlives/doomedmatu/client/screen/DefibScreen": [
+    "banner(Lnet/minecraft/client/gui/GuiGraphics;IILjava/lang/String;I)V",
+    "drawMon(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;III)V"
+  ],
+  "net/mattlives/doomedmatu/client/screen/DiagnosticTabletScreen": [
+    "vital(Lnet/minecraft/client/gui/GuiGraphics;IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILnet/mattlives/doomedmatu/client/screen/DiagnosticTabletScreen$Tab;Z)I",
+    "airMetric(Lnet/minecraft/client/gui/GuiGraphics;IILjava/lang/String;FI)I",
+    "sealedDecrypt(Lnet/minecraft/client/gui/GuiGraphics;IILjava/lang/String;Ljava/lang/String;I)I",
+    "drawPopup(Lnet/minecraft/client/gui/GuiGraphics;[Ljava/lang/String;)V",
+    "txt(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;IIIF)V",
+    "txtEllipsized(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;IIIIFZ)V",
+    "txtCEllipsized(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;IIIIFZ)V",
+    "drawFullTextTooltip(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;FF)V",
+    "txtW(Ljava/lang/String;F)I",
+    "ellipsize(Ljava/lang/String;IF)Ljava/lang/String;",
+    "txtR(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;IIIF)I",
+    "txtREllipsized(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;IIIIFZ)I",
+    "txtC(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;IIIF)V",
+    "ftitle(Lnet/minecraft/client/gui/GuiGraphics;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)I",
+    "gh(Lnet/minecraft/client/gui/GuiGraphics;IILjava/lang/String;)I",
+    "row(Lnet/minecraft/client/gui/GuiGraphics;IILjava/lang/String;Ljava/lang/String;II)I",
+    "note(Lnet/minecraft/client/gui/GuiGraphics;IILjava/lang/String;II)I",
+    "wrapped(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;IIIIF)I",
+    "wrappedHeight(Ljava/lang/String;IF)I",
+    "button(Lnet/minecraft/client/gui/GuiGraphics;IIILjava/lang/String;ILjava/lang/Runnable;)V",
+    "chip(Lnet/minecraft/client/gui/GuiGraphics;IIILjava/lang/String;I)V"
+  ],
+  "net/mattlives/doomedmatu/client/screen/DoomedColorEditorScreen": [
+    "drawColorChip(Lnet/minecraft/client/gui/GuiGraphics;IIIILjava/lang/String;I)V"
+  ],
+  "net/mattlives/doomedmatu/client/screen/DoomedSettingWidgets": [
+    "titleAndDescription(Lnet/minecraft/client/gui/GuiGraphics;IIIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZI)V",
+    "fit(Lnet/minecraft/client/gui/Font;Ljava/lang/String;I)Ljava/lang/String;"
+  ],
+  "net/mattlives/doomedmatu/client/screen/DropCapsuleScreen": [
+    "readout(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;Ljava/lang/String;II)I",
+    "bigText(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;FFFIZ)V",
+    "bigCentered(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;FFFI)V"
+  ],
+  "net/mattlives/doomedmatu/client/screen/ExtendingDoomedHelpScreen": [
+    "paragraph(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;IIII)I"
+  ],
+  "net/mattlives/doomedmatu/client/screen/FailureWarningPanel": [
+    "fitCentered(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/gui/Font;Ljava/lang/String;IIIIF)V",
+    "drawCenteredMessage(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/gui/Font;Ljava/lang/String;IIIIF)V"
+  ],
+  "net/mattlives/doomedmatu/client/screen/FieldJournalScreen": [
+    "fitToWidth(Ljava/lang/String;I)Ljava/lang/String;"
+  ],
+  "net/mattlives/doomedmatu/client/screen/HealthPanelBackdrop": [
+    "render(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/gui/Font;Lnet/mattlives/doomedmatu/client/screen/HealthPanelBackdrop$V;Ljava/lang/String;J)V",
+    "line(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/gui/Font;IIILjava/lang/String;Z)I"
+  ],
+  "net/mattlives/doomedmatu/client/screen/KeypadScreen": [
+    "center(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;IIIF)V"
+  ],
+  "net/mattlives/doomedmatu/client/screen/LeutenRescueScreen": [
+    "wrappedRescueLine(ILjava/lang/String;I)Ljava/util/List;"
+  ],
+  "net/mattlives/doomedmatu/client/screen/MachineGuiTheme": [
+    "drawLabelValue(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/gui/Font;Ljava/lang/String;Ljava/lang/String;IIII)V",
+    "drawWrapped(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/gui/Font;Ljava/lang/String;IIIII)V",
+    "fit(Lnet/minecraft/client/gui/Font;Ljava/lang/String;I)Ljava/lang/String;"
+  ],
+  "net/mattlives/doomedmatu/client/screen/MachineScreen": [
+    "drawWidgetButton(Lnet/minecraft/client/gui/GuiGraphics;[ILjava/lang/String;ZZ)V"
+  ],
+  "net/mattlives/doomedmatu/client/screen/MatuEncounterScreen": [
+    "text(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;DDID)V",
+    "center(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;DDID)V",
+    "wrap(Ljava/lang/String;I)Ljava/util/List;",
+    "wrapped(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;DDII)V"
+  ],
+  "net/mattlives/doomedmatu/client/screen/PatientExamScreen": [
+    "vital(Lnet/minecraft/client/gui/GuiGraphics;IILjava/lang/String;Ljava/lang/String;Z)I"
+  ],
+  "net/mattlives/doomedmatu/client/screen/RefusalScreen": [
+    "drawObfuscated(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;FFFI)V",
+    "fitScale(Ljava/lang/String;IF)F",
+    "drawScaledCentered(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;FFFI)V",
+    "scratched(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;FFFIJF)V"
+  ],
+  "net/mattlives/doomedmatu/client/screen/RitualScreen": [
+    "splitNarrator(Lnet/minecraft/client/gui/Font;Ljava/lang/String;I)Ljava/util/List;"
+  ],
+  "net/mattlives/doomedmatu/client/screen/SeveredExaminationScreen": [
+    "drawControl(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/renderer/Rect2i;Ljava/lang/String;ZZZ)V"
+  ],
+  "net/mattlives/doomedmatu/client/screen/SplintScreen": [
+    "drawToolCard(Lnet/minecraft/client/gui/GuiGraphics;ILjava/lang/String;Lnet/minecraft/world/item/ItemStack;ZZZLjava/lang/String;)V",
+    "drawUnderLabel(Lnet/minecraft/client/gui/GuiGraphics;ILjava/lang/String;)V"
+  ],
+  "net/mattlives/doomedmatu/client/screen/StatusPanelScreen": [
+    "triageCard(Lnet/minecraft/client/gui/GuiGraphics;IIIILjava/lang/String;Ljava/lang/String;)V",
+    "triageSection(Lnet/minecraft/client/gui/GuiGraphics;IILjava/lang/String;)I",
+    "drawTriageMetric(Lnet/minecraft/client/gui/GuiGraphics;IIILjava/lang/String;Ljava/lang/String;FZZ)I",
+    "fitTriageText(Ljava/lang/String;I)Ljava/lang/String;",
+    "drawTriageDetail(Lnet/minecraft/client/gui/GuiGraphics;IIILjava/lang/String;Ljava/lang/String;FZ)I",
+    "drawVitalLine(Lnet/minecraft/client/gui/GuiGraphics;IIILjava/lang/String;ZZ)I",
+    "drawSkillHint(Lnet/minecraft/client/gui/GuiGraphics;IIILjava/lang/String;)I",
+    "drawVitalLine(Lnet/minecraft/client/gui/GuiGraphics;IIILjava/lang/String;ZZFI)I",
+    "stat(Lnet/minecraft/client/gui/GuiGraphics;IILjava/lang/String;Ljava/lang/String;Z)V"
+  ],
+  "net/mattlives/doomedmatu/client/screen/TradeScreen": [
+    "drawFitString(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;IIII)V",
+    "drawFitCentered(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;IIII)V"
+  ],
+  "net/mattlives/doomedmatu/client/screen/WitnessCustomizationScreen": [
+    "drawMiniText(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;IIII)V"
+  ],
+  "net/mattlives/doomedmatu/client/screen/WitnessPatientScanScreen": [
+    "bigVital(Lnet/minecraft/client/gui/GuiGraphics;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V",
+    "txt(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;FFIF)V",
+    "rightText(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;IIIF)V",
+    "wrapped(Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;IIIIFI)V"
+  ],
+  "net/mattlives/doomedmatu/client/screen/defusal/CodexContent": [
+    "wrap(Lnet/minecraft/client/gui/Font;Ljava/lang/String;I)Ljava/util/List;"
+  ],
+  "net/mattlives/doomedmatu/client/screen/defusal/CodexView": [
+    "drawScaledString(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/gui/Font;Ljava/lang/String;FFFI)V",
+    "drawCenteredScaledString(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/gui/Font;Ljava/lang/String;FFFI)V"
+  ]
+}

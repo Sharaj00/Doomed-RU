@@ -1,0 +1,11 @@
+{
+  "transformed_classes_loaded": 227,
+  "optional_targets_unavailable": [
+    "net.mattlives.doomedmatu.compat.jade.FluidBarrelProvider",
+    "net.mattlives.doomedmatu.compat.jade.MachineProvider"
+  ],
+  "russian_assertions": 129,
+  "server_rule_comments_checked": 164,
+  "checks": 301,
+  "status": "passed"
+}

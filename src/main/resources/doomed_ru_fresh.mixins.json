@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "local.doomed.russianfresh.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "plugin": "local.doomed.russianfresh.TextPlugin",
+  "client": [
+    "DoomedTextMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

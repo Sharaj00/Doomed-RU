@@ -1,0 +1,15 @@
+{
+  "original_language_keys": 1148,
+  "translated_language_keys": 1148,
+  "missing_language_keys": [],
+  "extra_language_keys": [],
+  "literal_and_template_entries": 14762,
+  "manual_overrides": 884,
+  "resource_counts": {
+    "moodle/text.json": 167,
+    "oripathy/presentation.json": 3,
+    "dialogue/leuten_coded.json": 6
+  },
+  "previous_attempts_used": false,
+  "translation_basis": "Machine draft plus local manual terminology, UI and defusal review; complete editorial review is not claimed."
+}

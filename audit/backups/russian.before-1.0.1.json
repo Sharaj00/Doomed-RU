@@ -1,0 +1,210 @@
+{
+  "splitPerspective": false,
+  "bigpain": [
+    "A-AAAGH-please-!",
+    "God-make it-please, god, it HURTS!",
+    "Please make it stop... I\u0027ll do anything, just make it stop...",
+    "I can\u0027t-I\u0027m not strong enough-I can\u0027t take this!"
+  ],
+  "cantbreathe": [
+    "I-I can\u0027t... *gasp*... air...",
+    "Can\u0027t... *wheeze*... nothing\u0027s coming in...",
+    "It\u0027s crushing my chest... please...",
+    "Help... can\u0027t... breathe..."
+  ],
+  "lastmoments": [
+    "Is this... am I dying? Please, no...",
+    "It\u0027s so cold... I can\u0027t see anyone... where is everyone?",
+    "Where are my hands? I can\u0027t-I can\u0027t feel them...",
+    "Not here... please don\u0027t leave me alone here.",
+    "I don\u0027t want to go... I\u0027m scared, I don\u0027t want to go...",
+    "I am drifting away... Please, I don\u0027t want to die... It\u0027s all just black..",
+    "I... I am seeing it... it\u0027s all just nothingness afterwards.. No-Please.."
+  ],
+  "miserable": [
+    "I just... I can\u0027t do it anymore. I\u0027m sorry. Forgive me.",
+    "I\u0027m so empty... there\u0027s nothing left inside me.",
+    "PLEASE. PLEASE END MY SUFFERING. PLEASE.",
+    "Please forgive me.. *sob* please forgive me.. please forgive me..."
+  ],
+  "starving": [
+    "My stomach... it\u0027s eating itself...",
+    "I\u0027m so hungry I could cry.",
+    "Please... just a scrap... anything."
+  ],
+  "dehydrated": [
+    "Can\u0027t swallow... dust... please, a drop...",
+    "I need water. I\u0027m begging...",
+    "So thirsty my head is splitting."
+  ],
+  "exhausted": [
+    "Just... let me lie here... just for a second...",
+    "My heart... it\u0027s beating too fast...",
+    "I can\u0027t take another step. I can\u0027t."
+  ],
+  "freezing": [
+    "S-someone... wrap me up... please...",
+    "I can\u0027t-can\u0027t stop shaking-it hurts...",
+    "C-can\u0027t feel my t-toes... I\u0027m s-so cold..."
+  ],
+  "hot": [
+    "It\u0027s boiling... I can\u0027t sweat anymore.",
+    "I\u0027m baking alive...",
+    "Can\u0027t breathe in this heat..."
+  ],
+  "braindamaged": [
+    "Why can\u0027t I... what was I...",
+    "The words won\u0027t come... I can\u0027t think...",
+    "Why is everything so loud and... wrong... what?"
+  ],
+  "bleedingheavy": [
+    "It\u0027s everywhere-there\u0027s too much-!",
+    "Press on it-why won\u0027t it stop-please STOP!",
+    "It\u0027s all over my hands... it\u0027s all mine..."
+  ],
+  "bleeding": [
+    "I\u0027m bleeding... I can\u0027t hold it in.",
+    "I need to stop this... I\u0027m so dizzy...",
+    "Blood... oh god, that\u0027s a lot of blood."
+  ],
+  "verysick": [
+    "Something\u0027s broken inside me.",
+    "I\u0027m gonna be sick-oh god...",
+    "I feel so wrong... I want to go home."
+  ],
+  "depressed": [
+    "I should have died with the others.",
+    "I can\u0027t do it...Someone just.. End this...",
+    "It\u0027s never going to get better. It can\u0027t."
+  ],
+  "exerted": [
+    "I\u0027m completely spent...",
+    "Lungs feel like they are bleeding...",
+    "Need to-need to sit..."
+  ],
+  "pain": [
+    "My \u003climb\u003e... god, don\u0027t touch it, please don\u0027t touch it.",
+    "It\u0027s tearing... my \u003climb\u003e!",
+    "I can\u0027t move my \u003climb\u003e... why won\u0027t it move?"
+  ],
+  "verytired": [
+    "So tired... please let me sleep...",
+    "If I close my eyes... just for a minute...",
+    "My body feels like lead.",
+    "*sigh* I could sleep on some wool right now..."
+  ],
+  "opiatewithdrawal": [
+    "My bones-they\u0027re itching-please, just one, I swear just one...",
+    "I\u0027m sick, I\u0027m so sick without it-help me-!",
+    "I\u0027m crawling out of my skin-please!"
+  ],
+  "limbinfected": [
+    "My \u003climb\u003e... it\u0027s going black...",
+    "It smells rotting... am I rotting??",
+    "There\u0027s something festering in my \u003climb\u003e... it throbs..."
+  ],
+  "limbskin": [
+    "I can see... I can see inside my \u003climb\u003e...",
+    "The skin... it\u0027s just hanging off..."
+  ],
+  "limbmuscle": [
+    "It\u0027s dead weight... my \u003climb\u003e is just gone.",
+    "It just gave out-I can\u0027t feel it right..."
+  ],
+  "gloomy": [
+    "Everything is just... ruined.",
+    "I just want to crawl into a hole.",
+    "There\u0027s this weight... crushing me. Anyone..."
+  ],
+  "confused": [
+    "Where... how did I get here?",
+    "Things keep slipping away... I\u0027m scared.",
+    "I can\u0027t hold onto a single thought."
+  ],
+  "tired": [
+    "Everything is heavy.",
+    "I need to lie down soon.",
+    "Can barely walk..."
+  ],
+  "hungry": [
+    "I\u0027m so weak... need food.",
+    "Could eat anything right now.",
+    "Stomach hurts..."
+  ],
+  "thirsty": [
+    "My throat is sticking together.",
+    "Need a drink... so bad...",
+    "Mouth is like ash."
+  ],
+  "cold": [
+    "It\u0027s fre-e-ezing... I need to hide somewhere...",
+    "Can\u0027t get warm-mm...",
+    "S-Shivering..."
+  ],
+  "warm": [
+    "Stifling...",
+    "Getting way too hot.",
+    "Need some shade..."
+  ],
+  "sad": [
+    "I\u0027m so tired of hurting...",
+    "Just... why is it always like this?",
+    "I don\u0027t have the strength to cry anymore."
+  ],
+  "opiated": [
+    "It\u0027s all... cotton. Quiet.",
+    "Don\u0027t care anymore. Let them come.",
+    "It\u0027s finally quiet... Bliss."
+  ],
+  "opiatedsad": [
+    "I\u0027m numb... but I know I\u0027m still broken.",
+    "Can\u0027t feel my body. Still feel this rot in my head...",
+    "The pain is gone. I wish I was too."
+  ],
+  "sick": [
+    "I\u0027m burning up... but I\u0027m shivering.",
+    "Think I caught something... feeling really weak.",
+    "My stomach is rolling..."
+  ],
+  "wakeup": [
+    "Ugh... no... not awake, please...",
+    "I\u0027m up-I\u0027m up... barely...",
+    "What... how am I still alive?"
+  ],
+  "brainpanic": [
+    "Get it OFF me-god, get it OFFFF!!!",
+    "It\u0027s tearing my flesh-HELPP!!!",
+    "NO-get away-GET AWAYYYY!!!",
+    "AGH-it\u0027s eating MEEE-!",
+    "It won\u0027t let go-SOMEBODY HELP-it WON\u0027T LET GO!!!"
+  ],
+  "loud": [
+    "I can\u0027t hear-make it stop RINGING!",
+    "My ears-blood-god, my ears!",
+    "WHAT? I CAN\u0027T HEAR ANYTHING!",
+    "It\u0027s so loud-make it stop!"
+  ],
+  "fallscream": [
+    "NO-NO-NO!",
+    "AAAAAH!",
+    "OH GOD-PLEASE-NO-!",
+    "SOMEBODY-!"
+  ],
+  "hitgroundhard": [
+    "OOF-ahhh god...",
+    "Agh-I think something snapped!",
+    "I can\u0027t... I can\u0027t breathe-that hurt...",
+    "Everything\u0027s-Jeez.. Ow..."
+  ],
+  "cannibalism": [
+    "That\u0027s... that was a person. What did I just do?",
+    "I can still taste them. God, I can still taste them.",
+    "No. No, I was hungry-I had to be. I had to be...",
+    "It went down too easily. That frightens me more than the hunger."
+  ],
+  "happy": [
+    "Nothing hurts. I\u0027d forgotten that was allowed.",
+    "I could get used to this. That\u0027s the dangerous part.",
+    "Everything\u0027s still attached. I\u0027ll take it."
+  ]
+}

@@ -1,219 +1,40 @@
-# Doomed RU
+# DoomedRU 2.0.0
 
-Russian localization for **[Doomed](https://www.curseforge.com/minecraft/mc-mods/doomed)**
-(`doomedmatu`) 0.4.5 — Minecraft 1.20.1, Forge.
+Client localization addon for **Minecraft 1.20.1, Forge 47.x, Doomed 0.4.7.3**.
 
-*[Русская версия](README.ru.md)*
+Version 2.0.0 renames the addon; translation changes and the translated dialogue preset are documented in `CHANGES-1.0.1.md`.
 
-Client-side only. **The Doomed jar is never modified** — keep the original
-`doomedmatu-0.4.5.jar` and drop this addon next to it.
+## Installation
 
----
+Copy `build/libs/DoomedRU-2.0.0.jar` to the client's `mods` directory and select Russian in Minecraft's language menu. Keep the original Doomed mod installed. Use only one Russian localization addon for Doomed at a time. The addon is not needed on a dedicated server.
 
-## What it does
+The delivered addon has not been installed into the ordinary DOOMED instance. All launches use the separate `production-run` directory.
 
-Doomed shows text through three different channels, and each one needs a
-different approach. This addon covers all three.
+## Coverage and layout
 
-| Channel | Volume | How it is translated | Status |
-|---|---|---|---|
-| `lang/en_us.json` — proper translation keys | 1010 keys | a normal lang file | **1010 / 1010** |
-| Hardcoded string literals in code | ~9 600 constants | runtime substitution | ~67 % |
-| Datapack JSON — journal, traders, imaginary friend, advancements | 164 unique entries | runtime substitution, whole entries | **164 / 164** |
+* The Russian language file has exactly the original 1,148 English keys. No keys from earlier localization attempts or unrelated addons were imported.
+* Separate resources cover Moodle, oripathy and Leuten dialogue. The original empty `quips.json` remains empty; generated fallback dialogue is translated when presented.
+* An audited dictionary covers original visible hardcoded text, including medical screens, Witness, character dialogue, settings, item tooltips and journal records. Identifiers, routing keys and log messages are excluded from translation selection.
+* Only original `net.mattlives.doomedmatu` classes are transformation targets. There are no global Minecraft font, literal-component or rendering patches.
+* Full strings are translated before the original screen wrapping, width measurement, clipping and progressive dialogue reveal. Component styles and child components are retained.
+* Text pages of the defusal codex wrap and scale to their available height. Patient examination values scale inside their original columns. Cyrillic font fallback is included.
+* Settings search retains English names and aliases and also searches translated titles, descriptions and category names.
+* English mode restores original strings. Language-dependent resources reload when Minecraft changes language.
 
-Item names, block names, tooltips and subtitles come from the first channel,
-so they are handled by an ordinary resource-pack lang file and need no tricks.
+The translation began with a machine draft made from this exact JAR, followed by manual medical terminology, interface, subtitle and puzzle-rule corrections. A complete editorial review of every long passage is not claimed. Proper names, brands, physiological notation and puzzle identifiers may intentionally remain Latin.
 
-Almost everything else — the HUD, the triage panel, the WITNESS tablet, the
-settings screen, the mode-select screen — is **hardcoded English string
-literals**. There are hundreds of `Component.literal(...)` call sites in the mod. No
-lang file can reach them, which is why this addon exists at all.
+## Verification
 
----
+`audit/coverage.json` records resource coverage. `audit/client-result.json` records the actual isolated-client audit; screenshots are in `production-run/screenshots`. `audit/release-verification.json` records artifact hashes and package scope.
 
-## How it works
+The client audit uses the installed production Forge launcher and the supplied original mod, with Doomed Guns, EMI and JEI dependencies. It checks actual transformed classes, Russian and English language switching, resource selection, nested formatting, pixel-width wrapping and truncation, bilingual search and dialogue reveal. It also creates its own creative world for Witness, status and patient-examination screenshots. This is automated isolated-profile evidence, not a manual test of the complete ordinary modpack or every rare clinical condition. Jade is absent from that profile, so its optional targets are not runtime-verified.
 
-### Interception
+The audit runs only with `-Ddoomed.ru.audit=true`; ordinary installations do not create worlds or execute audit fixtures.
 
-The addon never edits Doomed. It hooks the vanilla rendering path with two
-Mixin layers:
+## Building
 
-**Primary — `LiteralContents.visit()`.** Every string the mod passes to
-`Component.literal(...)` flows through this method when it is drawn or
-measured. One hook covers button labels, screen titles, item tooltips, word
-wrapping, and text drawn by vanilla widgets on the mod's behalf.
+Use Java 17 and run `gradlew.bat build`. The checked-in resources are sufficient for a normal build; no translation service is contacted at build time or at runtime.
 
-**Secondary — `GuiGraphicsMixin` and `FontMixin`.** Catches strings drawn
-straight to the screen, bypassing `Component`: `GuiGraphics.drawString`,
-`drawCenteredString`, `Font.width`.
+The `tools` directory contains the fresh extraction and resource preparation workflow. Its translation draft cache is an authoring input, not a runtime dependency. The original JAR was inspected and decompiled independently for this project. No earlier Russian localization project or memory was used.
 
-Four narrow Mixins handle the ritual intro, WITNESS, the status panel, and
-animated thoughts: full labels and paragraphs are translated before wrapping or clipping, while thoughts reveal
-a stable Russian line during the typewriter effect. They do not redirect every
-method in every Doomed class, so target-method staticness cannot conflict.
-
-The intercepted string is looked up in a dictionary and replaced on the way to
-the renderer. The `Component` object itself is never mutated, so mod logic that
-compares strings keeps working.
-
-> **Note for anyone writing a similar addon.** Redirecting `Component.literal`
-> directly *does not work*. `Component` is an interface and `literal` is a
-> static method on it; the Mixin annotation processor resolves such a target
-> differently from an ordinary virtual method on an ordinary class, and the
-> injection is silently skipped when `"defaultRequire": 0`. Hooking
-> `LiteralContents.visit()` instead — a normal method on a normal class —
-> is what makes this reliable.
-
-### Lookup chain
-
-A string on its way to the screen is tested in this order:
-
-1. **Exact match** — `"SKIN"` → `"КОЖА"`.
-2. **Numeric pattern** — `"100 BPM"` collapses to the key `"{} BPM"`, the
-   number is put back. One entry covers the whole range of a gauge.
-3. **Free pattern** — the same for text substitutions. The mod builds case
-   notes as `String.format("%s opened.", part)`, so `"Left Foot opened."`
-   matches `"{} opened."` — and the captured body part is translated too.
-4. **Prefix** — Doomed types some text out character by character. A partial
-   frame returns a proportional slice of the translation, so the typewriter
-   effect plays in Russian instead of flickering between languages.
-5. **Composite** — several sentences in a row where only some are known. The
-   mod concatenates a moodle description with its live effects; the whole
-   string can never be a dictionary key, so it is translated sentence by
-   sentence, longest known chunk first.
-
-Character thoughts use a stricter path: the addon translates the known full
-line first and only then reveals the same fraction of its Russian text. Shared
-prefixes between different lines can therefore no longer switch translations
-between frames.
-
-Every result is cached, so nothing is recomputed per frame. The cache is
-capped and cleared on overflow — HUD readouts produce an unbounded stream of
-distinct strings.
-
-### Not touching other mods
-
-The dictionary is generated from Doomed's own jar, so its keys are
-Doomed-specific by construction. On top of that, short common words (`Done`,
-`Combat`, up to two words) are only substituted on Doomed screens. Long
-phrases are unique enough to translate anywhere.
-
----
-
-## Install
-
-1. Build (or download) `doomedru-1.2.0.jar`.
-2. Drop it into `.minecraft/mods` next to `doomedmatu-0.4.5.jar`.
-
-Client-side only — do not install it on a server.
-
-Check it works in game:
-
-```
-/doomedru
-```
-
-It reports the dictionary size, whether the hook actually attached, and how
-many strings passed through it. If the self-check says the hook is not
-working, the problem is the build, not the dictionary.
-
-| Command | |
-|---|---|
-| `/doomedru` | stats and hook diagnostics |
-| `/doomedru reload` | re-read `config/doomedru/ru_ru.json`, no restart needed |
-| `/doomedru dump` | write every untranslated string that appeared on screen |
-| `/doomedru toggle` | turn translation off to compare with the original |
-| `/doomedru targets` | which classes the hook attached to |
-
-Any string can be overridden without rebuilding — put it in
-`config/doomedru/ru_ru.json` and run `/doomedru reload`:
-
-```json
-{
-  "strings":  { "SKIN": "ПОКРОВ" },
-  "patterns": { "{} BPM": "{} уд/мин" }
-}
-```
-
----
-
-## Build
-
-Needs **JDK 17** and the Doomed jar in `libs/` (compile-time only — the Mixin
-annotation processor verifies that the target classes exist; it is not bundled
-into the output).
-
-```
-gradlew.bat build
-```
-
-The result is `build/libs/doomedru-1.2.0.jar`.
-
-The Gradle wrapper binary is not included — take `gradlew`, `gradlew.bat` and
-`gradle/` from the official [Forge 1.20.1 MDK](https://files.minecraftforge.net/net/minecraftforge/forge/index_1.20.1.html).
-
----
-
-## Translator tooling
-
-The dictionary is verified against the mod's jar, not guessed from gameplay.
-
-```
-python3 tools/extract_strings.py     # ground truth: every string in the jar
-python3 tools/audit_dict.py          # coverage, typography, term consistency
-python3 tools/audit_dict.py --by-class   # what is still left, as a work queue
-```
-
-`extract_strings.py` reads three sources: the constant pool of every class,
-the datapack JSON, and `lang/en_us.json`. It also recovers **string-concat
-recipes** — javac stores `"You are tiring (" + n + "% stamina)..."` as a
-single constant with markers — and turns them into `{}` pattern keys. That is
-how moodle descriptions with live values get translated.
-
-Run extraction and the audit after a Doomed update; they will show what changed.
-
----
-
-## Current coverage
-
-```
-lang keys          1010 / 1010
-narrative text      164 / 164   (20 426 characters)
-dictionary        5 155 strings + 312 patterns
-still untranslated 1 709 strings (109 331 chars) + 575 patterns
-```
-
-Most of what remains is config descriptions — long paragraphs visible only in
-one screen. The surfaces a player meets constantly (HUD, triage panel, WITNESS
-tablet, journal, traders, advancements) are done.
-
----
-
-## A note for the Doomed developer
-
-This addon is a workaround, and a fairly elaborate one. The mod has 895
-`Component.literal(...)` call sites against 109 `Component.translatable(...)`,
-so most of the interface is hardcoded English rather than translation keys.
-Every localization therefore has to intercept rendering instead of shipping a
-lang file.
-
-The Chinese `zh_cn.json` in the jar shows the effect clearly: it covers 964 of
-1010 lang keys — nearly complete for that channel — yet a Chinese player
-still sees an entirely English HUD, triage panel and tablet, because those
-strings never pass through the lang system.
-
-Moving the UI text to `Component.translatable(...)` keys would let every
-language ship as a plain resource pack, and addons like this one could shrink
-to a lang file. If that is ever interesting, the extracted string inventory in
-`build/doomedru-strings.json` is a ready-made starting point: 9 582 constants
-and 924 concat templates, grouped by class.
-
-No pressure either way — the mod is excellent, and this is offered as data
-rather than a complaint.
-
----
-
-## License
-
-MIT. Doomed itself belongs to its author (MattLives); this addon only ships
-translated text and the code that applies it.
+Original artifact SHA-256: `56bb50c5dafbc3daf6a7dae407adaef9084288ab9c25b7e1c7d2c615abdb21d6`.

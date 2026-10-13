@@ -1,39 +1,28 @@
 modLoader="javafml"
 loaderVersion="[47,)"
 license="MIT"
-
+clientSideOnly=true
 [[mods]]
-modId="doomedru"
-version="1.2.0"
-displayName="Doomed RU"
-description='''
-Русификатор интерфейса мода Doomed. Подменяет строки на лету по словарю
-config/doomedru/ru_ru.json. Сам Doomed не изменяется.
-'''
-
-[[dependencies.doomedru]]
-    modId="forge"
-    mandatory=true
-    versionRange="[47,)"
-    ordering="NONE"
-    side="CLIENT"
-
-[[dependencies.doomedru]]
-    modId="minecraft"
-    mandatory=true
-    versionRange="[1.20.1,1.21)"
-    ordering="NONE"
-    side="CLIENT"
-
-[[dependencies.doomedru]]
-    modId="doomedmatu"
-    mandatory=true
-    versionRange="[0.4.5,0.5.0)"
-    ordering="AFTER"
-    side="CLIENT"
-
-[[mixins]]
-config="doomedru.mixins.json"
-
-[[mixins]]
-config="doomedru.global.mixins.json"
+modId="doomed_ru_fresh"
+version="2.0.0"
+displayName="DoomedRU"
+description='''Russian resources and scoped text layout integration for Doomed 0.4.7.3.'''
+displayTest="IGNORE_ALL_VERSION"
+[[dependencies.doomed_ru_fresh]]
+modId="forge"
+mandatory=true
+versionRange="[47.3,48)"
+ordering="NONE"
+side="CLIENT"
+[[dependencies.doomed_ru_fresh]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1]"
+ordering="NONE"
+side="CLIENT"
+[[dependencies.doomed_ru_fresh]]
+modId="doomedmatu"
+mandatory=true
+versionRange="[0.4.7.3]"
+ordering="AFTER"
+side="CLIENT"

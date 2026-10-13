@@ -1,0 +1,288 @@
+{
+  "CLAWS": {
+    "cost": 4,
+    "english": [
+      "Claws",
+      "Tear into wood and soft stone with empty hands.",
+      "Harvest logs, planks, stone and deepslate barehanded at up to 2.2x speed. Healthy empty-hand attacks deal 2.5 damage total; mining and punching blunt the claws."
+    ],
+    "russian": [
+      "Когти",
+      "Рви дерево и мягкий камень голыми руками.",
+      "Добыча брёвен, досок, камня и глубинного сланца голыми руками — до 2.2 раза быстрее. Здоровые руки наносят без оружия 2.5 урона за удар; добыча и удары затупляют когти."
+    ]
+  },
+  "FUR": {
+    "cost": 2,
+    "english": [
+      "Fur",
+      "The warmest thing you can own - until it is soaked.",
+      "Insulation +0.45 dry, falling to -0.28 (below bare skin) past 62 wetness. Dries at 0.55x. Heat pushes into you 1.35x harder, and you burn food 1.25x faster."
+    ],
+    "russian": [
+      "Мех",
+      "Теплее всего на свете — пока не промокнет.",
+      "Теплоизоляция сухого меха: +0.45. При влажности выше 62 она падает до -0.28 — хуже голой кожи. Высыхание идёт со скоростью 0.55 от обычной. Тепло поступает в тело в 1.35 раза интенсивнее, а голод нарастает в 1.25 раза быстрее."
+    ]
+  },
+  "BRIGHT": {
+    "cost": 3,
+    "english": [
+      "Bright",
+      "A better head for medicine than most people start with.",
+      "Start at Intelligence +4. INT gates the hardest surgery in the game and is slow to train."
+    ],
+    "russian": [
+      "Сообразительность",
+      "В медицине твоя голова справляется лучше, чем у большинства.",
+      "Начальный интеллект: +4 уровня. Он нужен для самых сложных операций, а тренировать его непросто."
+    ]
+  },
+  "HARDY": {
+    "cost": 3,
+    "english": [
+      "Hardy",
+      "You get your wind back faster than other people do.",
+      "Start at Resilience +4, which is stamina regen you would otherwise have to earn."
+    ],
+    "russian": [
+      "Выносливость",
+      "Дыхание восстанавливается быстрее, чем у остальных.",
+      "Начальная стойкость: +4 уровня. Она ускоряет восстановление выносливости, и тебе не придётся сначала её заработать."
+    ]
+  },
+  "STEADY": {
+    "cost": 3,
+    "english": [
+      "Steady Hands",
+      "Whatever is happening to you, your hands stay where you put them.",
+      "The pain tremble in every treatment minigame is cut to 0.55x. Stitches, splints and surgery all land closer to where you aimed."
+    ],
+    "russian": [
+      "Твёрдая рука",
+      "Что бы ни происходило, руки остаются там, куда ты их направил.",
+      "Дрожь от боли во всех лечебных мини-играх уменьшается до 0.55 от обычной. Швы, шины и хирургические действия точнее попадают в цель."
+    ]
+  },
+  "STRONG_GUT": {
+    "cost": 3,
+    "english": [
+      "Strong Constitution",
+      "Things that fester in other people just do not, in you.",
+      "Immunity +18. Wounds take infection less readily and diseases have a harder time getting in."
+    ],
+    "russian": [
+      "Крепкий организм",
+      "То, что загнивает у других, у тебя не загнивает.",
+      "Иммунитет: +18. Раны реже заражаются, а болезням труднее проникнуть в организм."
+    ]
+  },
+  "WARM_BLOODED": {
+    "cost": 2,
+    "english": [
+      "Warm Blooded",
+      "The cold takes longer to find your fingers.",
+      "Frostbite accrues at 0.6x. It does not make you warmer - it buys you time before the extremities go."
+    ],
+    "russian": [
+      "Морозостойкость",
+      "Холоду нужно больше времени, чтобы добраться до пальцев.",
+      "Обморожение накапливается со скоростью 0.6 от обычной. Это не согревает тело, но даёт больше времени до повреждения конечностей."
+    ]
+  },
+  "THIRSTY": {
+    "cost": -2,
+    "english": [
+      "Thirsty",
+      "You need water far more often than anyone should.",
+      "Thirst drains 45% faster."
+    ],
+    "russian": [
+      "Жажда",
+      "Вода нужна гораздо чаще, чем должна.",
+      "Жажда нарастает на 45% быстрее."
+    ]
+  },
+  "RAVENOUS": {
+    "cost": -2,
+    "english": [
+      "Ravenous",
+      "You burn through food. Eating is a chore that never ends.",
+      "Hunger drains 45% faster."
+    ],
+    "russian": [
+      "Сильный голод",
+      "Еда сгорает в тебе. Есть приходится без конца.",
+      "Голод нарастает на 45% быстрее."
+    ]
+  },
+  "DROWSY": {
+    "cost": -2,
+    "english": [
+      "Drowsy",
+      "You tire early and often. Sleep is never quite enough.",
+      "Energy drains 40% faster, and your whole metabolism runs 15% hotter."
+    ],
+    "russian": [
+      "Сонливость",
+      "Усталость приходит рано и часто. Сна никогда не хватает.",
+      "Энергия расходуется на 40% быстрее, а весь обмен веществ ускоряется на 15%."
+    ]
+  },
+  "NIGHTMARES": {
+    "cost": -2,
+    "english": [
+      "Night Terrors",
+      "Sleeping badly is the normal outcome, not the unlucky one.",
+      "You are 2.5x likelier to have a nightmare, which costs mood and leaves you unrested."
+    ],
+    "russian": [
+      "Ночные кошмары",
+      "Плохой сон — обычное дело, а не редкая неудача.",
+      "Кошмары случаются в 2.5 раза чаще. Они ухудшают настроение и мешают отдохнуть."
+    ]
+  },
+  "BRITTLE": {
+    "cost": -3,
+    "english": [
+      "Brittle Bones",
+      "Your bones give up early.",
+      "Bones tolerate 38% less punishment. Falls that others walk away from break you."
+    ],
+    "russian": [
+      "Хрупкие кости",
+      "Кости сдаются раньше времени.",
+      "Кости выдерживают на 38% меньше нагрузки. Падения, после которых другие уходят на своих ногах, ломают тебе кости."
+    ]
+  },
+  "BLEEDER": {
+    "cost": -3,
+    "english": [
+      "Bleeder",
+      "Your blood does not want to clot.",
+      "Wounds clot at 0.55x. Everything bleeds nearly twice as long, and a bad one outruns a bandage."
+    ],
+    "russian": [
+      "Плохая свёртываемость",
+      "Твоя кровь не желает сворачиваться.",
+      "Свёртывание в ранах идёт со скоростью 0.55 от обычной. Кровотечение длится почти вдвое дольше, а сильное может оказаться слишком обильным для повязки."
+    ]
+  },
+  "ANAEMIC": {
+    "cost": -3,
+    "english": [
+      "Iron Deficient",
+      "Your iron runs down quickly. Getting up too fast can put you on the floor.",
+      "Baseline iron use is 1.6x and red cells rebuild at 0.45x. Standing after at least 1.5 seconds crouched, prone or in bed can grey your vision or make you collapse when iron, oxygen delivery or blood pressure is low."
+    ],
+    "russian": [
+      "Дефицит железа",
+      "Железо быстро расходуется. Резкий подъём может повалить на пол.",
+      "Базовый расход железа увеличен в 1.6 раза, восстановление эритроцитов замедлено до 0.45 от обычного. Если после хотя бы 1.5 секунды сидения на корточках, лежания или отдыха в кровати встать, при низком железе, доставке кислорода или АД может потемнеть в глазах или случиться обморок."
+    ]
+  },
+  "SICKLY": {
+    "cost": -3,
+    "english": [
+      "Sickly",
+      "You catch whatever is going around, and you catch it first.",
+      "Immunity -20. Wounds fester readily and every disease has an easier way in."
+    ],
+    "russian": [
+      "Болезненность",
+      "Подхватываешь всё, что ходит вокруг, и раньше всех.",
+      "Иммунитет: -20. Раны легко заражаются, а болезням проще проникнуть в организм."
+    ]
+  },
+  "ADDICTIVE": {
+    "cost": -2,
+    "english": [
+      "Addictive Personality",
+      "It takes hold of you faster than it should.",
+      "Opioid tolerance and nicotine dependence build 70% faster, so habits take hold sooner and withdrawal arrives earlier."
+    ],
+    "russian": [
+      "Лёгкое привыкание",
+      "Привыкание захватывает тебя быстрее, чем должно.",
+      "Толерантность к опиоидам и зависимость от никотина нарастают на 70% быстрее. Привычки закрепляются раньше, а абстиненция приходит скорее."
+    ]
+  },
+  "FRAGILE_MIND": {
+    "cost": -3,
+    "english": [
+      "Fragile Mind",
+      "The pit is deeper for you, and you fall into it faster.",
+      "Anhedonia deepens 45% faster - the numbness that blunts every good thing and survives your death."
+    ],
+    "russian": [
+      "Хрупкая психика",
+      "Для тебя эта яма глубже, и падаешь ты в неё быстрее.",
+      "Ангедония усиливается на 45% быстрее. Эта бесчувственность притупляет всё хорошее и сохраняется даже после смерти."
+    ]
+  },
+  "POOR_CIRCULATION": {
+    "cost": -2,
+    "english": [
+      "Poor Circulation",
+      "Your hands and feet go first, and they go early.",
+      "Frostbite accrues 60% faster."
+    ],
+    "russian": [
+      "Плохое кровообращение",
+      "Кисти и стопы страдают первыми, и слишком рано.",
+      "Обморожение накапливается на 60% быстрее."
+    ]
+  },
+  "MISSING_LEFT_ARM": {
+    "cost": -4,
+    "english": [
+      "Missing Left Arm",
+      "The whole left arm was gone before this body became your problem.",
+      "Your left upper arm, forearm and hand are biologically absent. They start clean and bloodless, and cannot act until fitted with a functional prosthetic."
+    ],
+    "russian": [
+      "Нет левой руки",
+      "Вся левая рука исчезла ещё до того, как тело стало твоей заботой.",
+      "Левые плечо, предплечье и кисть отсутствуют. Изначально всё чисто, без кровотечения; пользоваться рукой нельзя, пока не установлен исправный протез."
+    ]
+  },
+  "SCHIZOPHRENIA": {
+    "cost": 0,
+    "english": [
+      "Schizophrenia",
+      "You are not alone down here, and you never were.",
+      "You occasionally gain an imaginary friend - who may not be entirely imaginary. Other people who have it can see yours, and theirs can see you. Costs nothing and pays nothing for now, while it is being judged."
+    ],
+    "russian": [
+      "Шизофрения",
+      "Ты здесь не один. Никогда и не был один.",
+      "Иногда появляется воображаемый друг — возможно, не совсем воображаемый. Другие люди с этой чертой видят твоего друга, а их друзья видят тебя. Пока черта оценивается, она не стоит очков и не даёт их."
+    ]
+  },
+  "SEVERED": {
+    "cost": -5,
+    "english": [
+      "Severed",
+      "Your body no longer explains itself to you.",
+      "The status panel is replaced by a physical self-examination. You can look, touch, test movement, check circulation, smell wounds and count rough vitals, but exact measurements and hidden diagnoses require WITNESS. Diagnostic moodles you could not see or feel are hidden."
+    ],
+    "russian": [
+      "Отсечённость",
+      "Тело больше не объясняет тебе, что с ним происходит.",
+      "Панель состояния заменяется физическим самообследованием. Можно смотреть, ощупывать, проверять движения и кровообращение, нюхать раны и примерно считать показатели. Точные измерения и скрытые диагнозы требуют WITNESS. Неощутимые и невидимые диагностические индикаторы скрыты."
+    ]
+  },
+  "ADAPTIVE_EYES": {
+    "cost": 4,
+    "english": [
+      "Adaptive Eyes",
+      "Darkness slowly opens up to you. Sudden light does not forgive it.",
+      "After roughly 45 seconds in light level 3 or below, deep shadows become modestly clearer. Bright light strips that adaptation in seconds and can dazzle you for up to 8 seconds; a close, exposed explosion can injure adapted eyes. A blindfold worn before exposure preserves adaptation and prevents the dazzle and retinal injury."
+    ],
+    "russian": [
+      "Адаптация зрения",
+      "Тьма постепенно раскрывается. Резкий свет этого не прощает.",
+      "Примерно после 45 секунд при освещённости 3 или ниже глубокие тени становятся немного различимее. Яркий свет за секунды снимает адаптацию и может ослепить на срок до 8 секунд; близкий взрыв без укрытия способен повредить адаптированные глаза. Заранее надетая повязка сохраняет адаптацию и защищает от ослепления и повреждения сетчатки."
+    ]
+  }
+}
